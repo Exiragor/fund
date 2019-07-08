@@ -6,11 +6,11 @@ import bodyparser from 'body-parser';
 import { allowCrossDomain } from './middlewares';
 import routes from './routes';
 
-let startServer = async () => {
+const startServer = async () => {
     env.config();
     let app = express();
     //init db connection
-    if (process.env.APP_MODE == 'develop') {
+    if (process.env.APP_MODE == 'development') {
         const dbConn = await createConnection();
         if (dbConn) {
             await dbConn.runMigrations();
