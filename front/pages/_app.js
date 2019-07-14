@@ -3,6 +3,7 @@ import React from 'react';
 import { initializeStore } from '../store';
 import { Provider } from 'mobx-react';
 import "../style.css";
+import Header from '../components/Layout/Header';
 
 class MyMobxApp extends App {
   static async getInitialProps(appContext) {
@@ -16,6 +17,7 @@ class MyMobxApp extends App {
 
     return {
       ...appProps,
+
       initialMobxState: mobxStore,
     }
   }
@@ -33,7 +35,12 @@ class MyMobxApp extends App {
     return (
       <Container>
         <Provider store={this.mobxStore}>
-          <Component {...pageProps} />
+          <div>
+            <Header />
+            <main>
+              <Component {...pageProps} />
+            </main>
+          </div>
         </Provider>
       </Container>
     )
