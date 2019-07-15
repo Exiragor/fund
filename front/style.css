@@ -488,7 +488,7 @@ nav ul {
     width: 100%;
     height: 10px;
     background: inherit;
-    background-color: rgba(255, 88, 0, 1);
+    background-color: #d21b22;
     border: none;
     border-radius: 0px;
     -moz-box-shadow: none;
@@ -2572,9 +2572,18 @@ img {
 
 a.button {
     height: 65px;
-    background-color: #E32636;
+    background-color: #d21b22;
     border-radius: 35px;
     display: flex;
     align-items: center;
     color: #ffffff;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.mx-30 {
+    margin-right: 30px;
+    margin-left: 30px;
 }

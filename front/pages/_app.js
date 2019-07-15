@@ -3,7 +3,9 @@ import React from 'react';
 import { initializeStore } from '../store';
 import { Provider } from 'mobx-react';
 import "../style.css";
+import Head from 'next/head';
 import Header from '../components/Layout/Header';
+import Footer from '../components/Layout/Footer';
 
 class MyMobxApp extends App {
   static async getInitialProps(appContext) {
@@ -36,10 +38,14 @@ class MyMobxApp extends App {
       <Container>
         <Provider store={this.mobxStore}>
           <div>
+            <Head>
+              <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+            </Head>
             <Header />
             <main>
               <Component {...pageProps} />
             </main>
+            <Footer />
           </div>
         </Provider>
       </Container>
