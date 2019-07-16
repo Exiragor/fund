@@ -5,7 +5,7 @@ const Footer = () =>
     <div className="footer widget mx-30">
         <p className="text text-left">
             <span>© Фонд «Наша песня»</span><br />
-            <span>Реквизиты благотворительного фонда «Образ жизни»</span><br />
+            <span>Реквизиты фонда «Наша песня»</span><br />
             <span>ОГРН: 1157700006892</span><br />
             <span>ИНН: 7729460778</span> <span>КПП: 772901001</span><br />
             <span>БИК 044525225</span> <span>в ПАО Сбербанк России</span><br />

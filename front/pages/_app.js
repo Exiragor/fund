@@ -2,6 +2,8 @@ import App, { Container } from 'next/app';
 import React from 'react';
 import { initializeStore } from '../store';
 import { Provider } from 'mobx-react';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "../style.css";
 import Head from 'next/head';
 import Header from '../components/Layout/Header';
