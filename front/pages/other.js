@@ -1,8 +1,3 @@
 import React from 'react'
-import Page from '../components/Page'
 
-export default class Counter extends React.Component {
-  render() {
-    return <Page title="Other Page" linkTo="/" />
-  }
-}
+export default () => <h1 className="text-center">Внутренняя страница</h1>;

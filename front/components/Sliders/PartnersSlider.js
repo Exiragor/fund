@@ -18,28 +18,19 @@ const PartnersSlider = () => {
                     <img src="/static/Maestro.jpg" />
                 </a>
                 <a href="/">
-                    <img src="/static/conductor.jpg" />
+                    <img src="/static/logo.jpg" />
                 </a>
                 <a href="/">
-                    <img src="/static/logo.jpg" />
+                    <img src="/static/conductor.jpg" />
                 </a>
                 <a href="/">
                     <img src="/static/Maestro.jpg" />
                 </a>
                 <a href="/">
-                    <img src="/static/conductor.jpg" />
-                </a>
-                <a href="/">
                     <img src="/static/logo.jpg" />
                 </a>
                 <a href="/">
-                    <img src="/static/Maestro.jpg" />
-                </a>
-                <a href="/">
                     <img src="/static/conductor.jpg" />
-                </a>
-                <a href="/">
-                    <img src="/static/logo.jpg" />
                 </a>
             </Slider>
         </section>

@@ -39,7 +39,7 @@ class MyMobxApp extends App {
     return (
       <Container>
         <Provider store={this.mobxStore}>
-          <div>
+          <div className="canvas">
             <Head>
               <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
             </Head>
