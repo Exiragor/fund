@@ -685,9 +685,6 @@ nav ul {
     font-size: 30px;
     padding: 34px 0;
 }
-.slick-prev:before, .slick-next:before {
-    color: #000000 !important;
-}
 .background-opalacity {
     position: relative;
 }
@@ -1117,13 +1114,6 @@ footer li:last-child {
 .regular img {
     height: auto;
     margin: 0 20px !important;
-}
-.slick-next {
-    right: 10px;
-}
-.slick-prev {
-    left: 10px;
-    z-index: 2;
 }
 .entry-content .slick-next {
     right: -30px;
@@ -2630,8 +2620,28 @@ section.partners-slider .slick-next {
     right: -30px;
 }
 
-.slick-next:before {
-    color: #000000 !important;
+.slick-arrow:before {
+    content: "" !important;
+}
+
+.slick-arrow {
+    background: url("/static/slick-arrow.svg") 50% no-repeat;
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    transition: all 0.3s ease-out;
+}
+.slick-arrow:hover, .slick-arrow:focus {
+    background: url("/static/slick-arrow.svg") 50% no-repeat;
+    box-shadow: 0 20px 30px rgba(127,142,165,0.5);
+}
+.slick-prev {
+    left: 10px;
+    z-index: 2;
+    transform: scale(-1, 1) translate(0, -50%);
+}
+.slick-next {
+    right: 10px;
 }
 
 .canvas {
