@@ -159,17 +159,16 @@ header {
     font-weight: 400;
     font-style: italic;
     font-size: 16px;
-    color: #999999;
 }
 .header_content img {
-    width: 90%;
+    width: 100%;
     height: 100%;
 }
 .header_menu {
     width: 1200px;
     height: 60px;
     background: inherit;
-    background-color: rgba(242, 242, 242, 1);
+    background-color: #87CEFA;
     box-sizing: border-box;
     border-width: 1px;
     border-style: solid;
@@ -989,7 +988,7 @@ footer {
     width: 100%;
     height: auto;
     background: inherit;
-    background-color: rgba(228, 228, 228, 1);
+    background-color: #87CEFA;
     border: none;
     border-radius: 0px;
     -moz-box-shadow: none;
@@ -2594,6 +2593,7 @@ a.button {
     float: left;
     position: relative;
     height: 500px;
+    overflow: hidden;
 }
 
 .main-slider__content--left {
@@ -2602,6 +2602,11 @@ a.button {
 
 .main-slider__content--right {
     width: 70%;
+}
+
+.main-slider__slide {
+    background-size: cover;
+    height: 500px;
 }
 
 section.partners-slider {
@@ -2660,4 +2665,8 @@ main {
 
 footer {
     flex: 0 0 auto;
+}
+
+.float-clear {
+    clear: both;
 }

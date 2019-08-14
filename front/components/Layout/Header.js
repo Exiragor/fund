@@ -12,12 +12,13 @@ const Header = () => <header>
             </div>
             <div className="arial widget">
                 <div>
-                    <p><span>Мы поем, чтобы жить!</span></p>
+                    <p><span>Мы живем, чтобы петь,<br /> А поем - чтобы жить!</span></p>
                 </div>
             </div>
             <div className="widget">
                 <div>
                     <p><span><a href="tel:+74997559551">+7 (499) 755-95-51</a></span></p>
+                    <p><span><a href="mailto:nashapesnya@list.ru">nashapesnya@list.ru</a></span></p>
                 </div>
             </div>
             <div className="widget">
