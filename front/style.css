@@ -139,7 +139,7 @@ header {
     padding: 0 25px 15px;
 }
 .header .widget:nth-of-type(1) {
-    width: 390px;
+    width: 402px;
     height: 100%;
 }
 .header .widget:nth-of-type(2) {
@@ -159,17 +159,16 @@ header {
     font-weight: 400;
     font-style: italic;
     font-size: 16px;
-    color: #999999;
 }
 .header_content img {
-    width: 90%;
+    width: 100%;
     height: 100%;
 }
 .header_menu {
     width: 1200px;
     height: 60px;
     background: inherit;
-    background-color: rgba(242, 242, 242, 1);
+    background-color: #87CEFA;
     box-sizing: border-box;
     border-width: 1px;
     border-style: solid;
@@ -441,12 +440,18 @@ ul.text_slider {
     background-color: rgba(255, 255, 255, 0.78);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     position: relative;
-    padding-top: 150px;
     z-index: 1;
+}
+
+.blur_content h4 {
+    text-align: center;
+    padding: 0 15px;
+    margin: 0;
 }
 .blur_content_absolute {
     position: absolute;
@@ -989,7 +994,7 @@ footer {
     width: 100%;
     height: auto;
     background: inherit;
-    background-color: rgba(228, 228, 228, 1);
+    background-color: #87CEFA;
     border: none;
     border-radius: 0px;
     -moz-box-shadow: none;
@@ -2571,9 +2576,12 @@ a.button {
     color: #ffffff;
 }
 
-.button--main-slider {
+a.button--main-slider {
+    background-color: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.0980392156862745);
+    color: #000;
     width: 60%;
-    margin-top: 60px;
+    margin-top: 35px;
 }
 
 .text-left {
@@ -2594,6 +2602,7 @@ a.button {
     float: left;
     position: relative;
     height: 500px;
+    overflow: hidden;
 }
 
 .main-slider__content--left {
@@ -2602,6 +2611,11 @@ a.button {
 
 .main-slider__content--right {
     width: 70%;
+}
+
+.main-slider__slide {
+    background-size: cover;
+    height: 500px;
 }
 
 section.partners-slider {
@@ -2635,6 +2649,15 @@ section.partners-slider .slick-next {
     background: url("/static/slick-arrow.svg") 50% no-repeat;
     box-shadow: 0 20px 30px rgba(127,142,165,0.5);
 }
+section.partners-slider .slick-arrow {
+    background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
+}
+
+section.partners-slider .slick-arrow:hover, section.partners-slider .slick-arrow:focus {
+    background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
+    box-shadow: 0 20px 30px rgba(127,142,165,0.5);
+}
+
 .slick-prev {
     left: 10px;
     z-index: 2;
@@ -2660,4 +2683,8 @@ main {
 
 footer {
     flex: 0 0 auto;
+}
+
+.float-clear {
+    clear: both;
 }

@@ -7,6 +7,7 @@ const Home = () => {
     return (
         <div>
             <MainSlider />
+            <div className="float-clear" />
             <Services />
             <HelpInfo />
             <PartnersSlider />
