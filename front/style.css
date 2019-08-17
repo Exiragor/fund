@@ -2653,7 +2653,7 @@ section.partners-slider .slick-arrow {
     background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
 }
 
-section.partners-slider .slick-arrow:hover, .slick-arrow:focus {
+section.partners-slider .slick-arrow:hover, section.partners-slider .slick-arrow:focus {
     background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
     box-shadow: 0 20px 30px rgba(127,142,165,0.5);
 }
