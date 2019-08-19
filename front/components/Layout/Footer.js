@@ -1,4 +1,4 @@
-import FontAwesome from 'react-fontawesome';
+import Socials from '../Socials/List';
 
 const Footer = () =>
 <footer>
@@ -14,14 +14,13 @@ const Footer = () =>
         </p>
         <p className="text-left"><span><a href="/" className="grey_link" target="_blank">Политика обработки персональных данных</a></span></p>
     </div>
-    <div className="footer widget">
-        <h5>БУДЬ В КУРСЕ НОВОСТЕЙ</h5>
-        <input type="email" name="your-email" size="40" placeholder="Ваш email" />
-    </div>
+        {/*<div className="footer widget">*/}
+            {/*<h5>БУДЬ В КУРСЕ НОВОСТЕЙ</h5>*/}
+            {/*<input type="email" name="your-email" size="40" placeholder="Ваш email" />*/}
+        {/*</div>*/}
     <div className="footer widget">
         <h5>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h5>
-        <a className="social-icon" href="https://vk.com" target="_blank"><FontAwesome name="vk" /></a>
-        <a className="social-icon" href="https://ok.ru/" target="_blank"><FontAwesome name="odnoklassniki" /></a>
+        <Socials size="20px" />
     </div>
 </footer>;
 

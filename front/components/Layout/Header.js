@@ -68,7 +68,7 @@ const Header = () => <header>
                         <Link prefetch href="/other"><a>Новости</a></Link>
                     </li>
                     <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                        <Link prefetch href="/other"><a>Контакты</a></Link>
+                        <Link prefetch href="/contacts"><a>Контакты</a></Link>
                     </li>
                 </ul>
             </div>

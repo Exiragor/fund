@@ -828,12 +828,13 @@ nav ul {
     width: 300px;
 }
 .contact-content {
-    width: 600px;
+    width: 520px;
     -webkit-box-shadow: 10px 0px 25px rgba(0, 0, 0, 0.0980392156862745);
     box-shadow: 10px 0px 25px rgba(0, 0, 0, 0.0980392156862745);
     float: left;
-    z-index: 999;
+    z-index: 8;
     position: relative;
+    padding: 30px 40px;
 }
 .contact_title {
     font-family: 'PT Sans Regular', 'Arial';
@@ -2691,4 +2692,9 @@ footer {
 
 .company img {
     max-width: 300px;
+}
+
+.page-contact {
+    position: relative;
+    padding: 0;
 }
