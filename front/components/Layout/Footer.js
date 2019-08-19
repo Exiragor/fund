@@ -4,15 +4,15 @@ const Footer = () =>
 <footer>
     <div className="footer widget mx-30">
         <p className="text text-left">
-            <span>© Фонд «Наша песня»</span><br />
-            <span>Реквизиты фонда «Наша песня»</span><br />
-            <span>ОГРН: 1157700006892</span><br />
-            <span>ИНН: 7729460778</span> <span>КПП: 772901001</span><br />
+            <span>© Благотворительный Фонд «Наша песня»</span><br />
+            <span>Реквизиты Благотворительного Фонда «Наша Песня»</span><br />
+            <span>ОГРН: 1195000002922</span><br />
+            <span>ИНН: 5038143310</span><br />
             <span>БИК 044525225</span> <span>в ПАО Сбербанк России</span><br />
-            <span>Р/с 40703810638000002036</span><br />
-            <span>К/с 30101810400000000225</span>
+            <span>Р/с 40703810040000005812</span><br />
+            <span>К/с 301018104000000002252</span>
         </p>
-        <p className="text-left"><span><a href="/" className="grey_link" target="_blank">Политика обработки персональных данных</a></span></p>
+        {/*<p className="text-left"><span><a href="/" className="grey_link" target="_blank">Политика обработки персональных данных</a></span></p>*/}
     </div>
         {/*<div className="footer widget">*/}
             {/*<h5>БУДЬ В КУРСЕ НОВОСТЕЙ</h5>*/}

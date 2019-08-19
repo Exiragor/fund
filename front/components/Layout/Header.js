@@ -22,7 +22,7 @@ const Header = () => <header>
                 </div>
             </div>
             <div className="widget">
-                <Link prefetch href="/">
+                <Link prefetch href="/contacts">
                     <a className="button">
                         <span className="text">Поддержать</span>
                     </a>
