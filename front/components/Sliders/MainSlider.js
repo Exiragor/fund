@@ -18,19 +18,23 @@ const MainSlider = () => {
     const slides = [
         {
             img: '/static/bridge.jpg',
+            title: 'Благотворительный Фонд "Наша песня" сделал красивый подарок жителям Подмосковья к Юбилею',
             text: 'Благотворительный Фонд "Наша песня" сделал красивый подарок жителям Подмосковья к предстоящему ' +
             'Юбилею Московской области.отметил начало своей деятельности съемкой клипа "Стожок" ' +
             'с участием Вокального проекта "Маэстро".',
-            url: '/'
+            url: '/other'
         },
         {
             img: '/static/laurel.jpg',
+            title: 'Ольга Семенова стала Лауреатом Александро-Невского Фестиваля',
             text: 'Композитор и поэт Ольга Семенова стала Лауреатом Александро-' +
-            'Невского Фестиваля духовно-патриотической песни в Санкт-Петербурге...'
+            'Невского Фестиваля духовно-патриотической песни в Санкт-Петербурге...',
+            url: '/other'
         },
         {
             img: '/static/logo.jpg',
-            text: 'Теперь у нашего Фонда есть собственный гимн!..'
+            text: 'Теперь у нашего Фонда есть собственный гимн!..',
+            url: '/other'
         }
     ];
 
@@ -40,7 +44,8 @@ const MainSlider = () => {
                 <div className="background-blur"
                      style={{ backgroundImage: 'url(/static/Maestro.jpg)' }} />
                 <div className="blur_content">
-                    <h4>{ slides[slideIndex].text || '' }</h4>
+                    {slides[slideIndex].title && <h3>{slides[slideIndex].title}</h3>}
+                    {slides[slideIndex].text && <p>{slides[slideIndex].text}</p>}
                     {slides[slideIndex].url &&
                         <Link prefetch href={slides[slideIndex].url}>
                             <a className="button text-center button--main-slider">
@@ -53,7 +58,7 @@ const MainSlider = () => {
             <div className="main-slider__content main-slider__content--right">
                 <Slider {...settings}>
                     {slides.map(slide =>
-                        <div>
+                        <div key={slide.img}>
                             <div
                                 className="main-slider__slide"
                                 style={{ backgroundImage: `url("${slide.img}")` }}

@@ -15,19 +15,19 @@ const PartnersSlider = () => {
             <div className="title">Партнеры фонда</div>
             <Slider {...settings}>
                 <a href="/">
-                    <img src="/static/Maestro.jpg" />
-                </a>
-                <a href="/">
                     <img src="/static/logo.jpg" />
+                </a>
+                <a href="https://kosygin-rgu.ru/" target="_blank">
+                    <img src="/static/РГУ-02 на светлом.png" />
                 </a>
                 <a href="/">
                     <img src="/static/conductor.jpg" />
                 </a>
                 <a href="/">
-                    <img src="/static/Maestro.jpg" />
-                </a>
-                <a href="/">
                     <img src="/static/logo.jpg" />
+                </a>
+                <a href="https://kosygin-rgu.ru/" target="_blank">
+                    <img src="/static/РГУ-02 на светлом.png" />
                 </a>
                 <a href="/">
                     <img src="/static/conductor.jpg" />

@@ -448,11 +448,16 @@ ul.text_slider {
     z-index: 1;
 }
 
-.blur_content h4 {
+.blur_content h3, .blur_content p {
     text-align: center;
     padding: 0 15px;
     margin: 0;
 }
+
+.blur_content p {
+    margin-top: 15px;
+}
+
 .blur_content_absolute {
     position: absolute;
     left: 0;
@@ -828,12 +833,13 @@ nav ul {
     width: 300px;
 }
 .contact-content {
-    width: 600px;
+    width: 520px;
     -webkit-box-shadow: 10px 0px 25px rgba(0, 0, 0, 0.0980392156862745);
     box-shadow: 10px 0px 25px rgba(0, 0, 0, 0.0980392156862745);
     float: left;
-    z-index: 999;
+    z-index: 8;
     position: relative;
+    padding: 30px 40px;
 }
 .contact_title {
     font-family: 'PT Sans Regular', 'Arial';
@@ -2605,6 +2611,10 @@ a.button--main-slider {
     overflow: hidden;
 }
 
+.main-slider__content .button {
+    font-weight: 700;
+}
+
 .main-slider__content--left {
     width: 30%;
 }
@@ -2687,4 +2697,13 @@ footer {
 
 .float-clear {
     clear: both;
+}
+
+.company img {
+    max-width: 300px;
+}
+
+.page-contact {
+    position: relative;
+    padding: 0;
 }

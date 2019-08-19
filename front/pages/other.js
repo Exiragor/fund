@@ -1,3 +1,1 @@
-import React from 'react'
-
-export default () => <h1 className="text-center">Внутренняя страница</h1>;
+export default () => <h1 className="text-center">Данная страница находится в разработке.</h1>;
