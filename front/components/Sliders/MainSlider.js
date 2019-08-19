@@ -53,7 +53,7 @@ const MainSlider = () => {
             <div className="main-slider__content main-slider__content--right">
                 <Slider {...settings}>
                     {slides.map(slide =>
-                        <div>
+                        <div key={slide.img}>
                             <div
                                 className="main-slider__slide"
                                 style={{ backgroundImage: `url("${slide.img}")` }}

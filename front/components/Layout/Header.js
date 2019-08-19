@@ -32,28 +32,43 @@ const Header = () => <header>
         <div className="header_menu">
             <div className="menu-mnu-container">
                 <ul id="menu-mnu" className="menu">
-                    <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-105">
-                        <Link prefetch href="/other"><a>О нас</a></Link>
+                    <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <Link prefetch href="/about/fond"><a>О нас</a></Link>
                         <ul className="sub-menu">
-                            <li id="menu-item-124"
+                            <li
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-124">
                                 <Link prefetch href="/about/fond"><a>О фонде</a></Link></li>
-                            <li id="menu-item-123"
+                            <li
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-123">
                                 <Link prefetch href="/other"><a>Как помочь</a></Link></li>
-                            <li id="menu-item-122"
-                                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-122">
-                                <Link prefetch href="/other"><a>Попечительский совет</a></Link></li>
-                            <li id="menu-item-121"
+                            <li
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-121">
                                 <Link prefetch href="/other"><a>Партнеры</a></Link></li>
-                            <li id="menu-item-120"
+                            <li
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-120">
                                 <Link prefetch href="/other"><a>Достижения</a></Link></li>
-                            <li id="menu-item-119"
+                            <li
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-119">
                                 <Link prefetch href="/other"><a>Отчеты</a></Link></li>
                         </ul>
+                    </li>
+                    <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                        <Link prefetch href="/other"><a>Маэстро</a></Link>
+                    </li>
+                    <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                        <Link prefetch href="/other"><a>Программы</a></Link>
+                    </li>
+                    <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                        <Link prefetch href="/other"><a>Услуги</a></Link>
+                    </li>
+                    <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                        <Link prefetch href="/other"><a>Проекты</a></Link>
+                    </li>
+                    <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                        <Link prefetch href="/other"><a>Новости</a></Link>
+                    </li>
+                    <li className="menu-item menu-item-type-post_type menu-item-object-page">
+                        <Link prefetch href="/other"><a>Контакты</a></Link>
                     </li>
                 </ul>
             </div>
