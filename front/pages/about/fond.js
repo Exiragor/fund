@@ -40,7 +40,7 @@ const aboutFondPage = () => {
                 </div>
                 <h3>Руководство</h3>
                 <EmployeeList employees={employeesMain} />
-                <h3>ПОПЕЧИТЕЛЬСКИЙ СОВЕТ</h3>
+                <h3 style={{marginTop: '60px'}}>Попечительский совет</h3>
                 <EmployeeList employees={employees} />
             </div>
             <Aside sections={menu} currentPage="О фонде" />

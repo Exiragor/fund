@@ -7,7 +7,7 @@ const Aside = ({ sections, currentPage }) => {
             <nav className="sidebar-mnu">
                 <ul>
                     {sections.map(section =>
-                            <li className={cn('page_item', { 'current_page_item': section.name === currentPage})}>
+                            <li className={cn('page_item', { 'current_page_item': section.name === currentPage})} key={section.name}>
                                 <Link prefetch href={section.url}><a>{section.name}</a></Link>
                             </li>
                         )

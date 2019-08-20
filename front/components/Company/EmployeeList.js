@@ -2,7 +2,7 @@ const EmployeeList = ({employees}) => {
     return (
         <div>
             {employees.map(employee =>
-                <div className="company">
+                <div className="company" key={employee.name}>
                     <p>
                         <img src={employee.img} className="alignleft" />
                     </p>
