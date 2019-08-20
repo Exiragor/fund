@@ -4,7 +4,7 @@ const ArticleList = ({articles, width}) => {
     return (
         <div>
             {articles.map(article =>
-                <div className="cards" style={{width}}>
+                <div className="cards" style={{width}} key={article.title}>
                     <Link prefetch href={article.url}>
                         <a>
                             <div className="services_image"

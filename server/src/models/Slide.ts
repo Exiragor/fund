@@ -1,13 +1,11 @@
-import {Entity, Column, PrimaryGeneratedColumn} from "typeorm";
-import {Image} from "./Image";
+import {Entity, Column, PrimaryGeneratedColumn, OneToMany} from "typeorm";
 
 @Entity()
 export class Slide {
 
-    constructor(id: number, name: string, image: Image, link: string, title: string, text: string, isActive: boolean) {
+    constructor(id: number, name: string, link: string, title: string, text: string, isActive: boolean) {
         this.id = id;
         this.sliderName = name;
-        this.image = image;
         this.link = link;
         this.title = title;
         this.text = text;
@@ -19,9 +17,6 @@ export class Slide {
 
     @Column()
     sliderName: string;
-
-    @Column()
-    image: Image;
 
     @Column()
     link: string;
