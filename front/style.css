@@ -373,7 +373,7 @@ ul.text_slider {
     border-bottom: 1px solid #CCCCCC;
 }
 .sidebar-mnu li.current_page_item, .sidebar-mnu li.current-cat, .sidebar-mnu li.current_page_parent, .sidebar-mnu li.current_page_ancestor {
-    border-left: 10px solid #FF5800;
+    border-left: 10px solid #d21b22;
     width: 265px;
 
 }
@@ -521,9 +521,8 @@ nav ul {
 }
 .content_two .img p {
     position: absolute;
-    left: 40px;
+    right: 40px;
     top: 0px;
-    width: 250px;
     height: 20px;
     font-weight: 700;
     font-style: normal;
@@ -725,7 +724,7 @@ nav ul {
 .cards {
     float: left;
     width: 30%;
-    margin: 40px 20px;
+    margin: 20px 15px;
     -webkit-box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.0470588235294118);
     box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.0470588235294118);
     -webkit-transition: .8s;
