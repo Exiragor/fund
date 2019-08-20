@@ -1,14 +1,8 @@
 import EmployeeList from '../../components/Company/EmployeeList';
 import Aside from '../../components/Navigation/Aside';
+import {menu} from './menu';
 
 const aboutFondPage = () => {
-    const menu = [
-        { name: 'О фонде', url: '/about/fond', currentPage: true },
-        { name: 'Как помочь', url: '/other' },
-        { name: 'Партнеры', url: '/other' },
-        { name: 'Достижения', url: '/other' },
-        { name: 'Отчеты', url: '/other' },
-    ];
     const employeesMain = [
         { img: '/static/employees/Семенова О..jpg', position: 'Основатель Фонда', name: 'Семенова Ольга Филипповна'},
         { img: '/static/employees/Президент Фонда.JPG', position: 'Президент Фонда', name: 'Лебедев Михаил Александрович'}
@@ -49,7 +43,7 @@ const aboutFondPage = () => {
                 <h3>ПОПЕЧИТЕЛЬСКИЙ СОВЕТ</h3>
                 <EmployeeList employees={employees} />
             </div>
-            <Aside sections={menu} />
+            <Aside sections={menu} currentPage="О фонде" />
         </div>
     )
 };

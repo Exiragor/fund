@@ -40,7 +40,7 @@ const Header = () => <header>
                                 <Link prefetch href="/about/fond"><a>О фонде</a></Link></li>
                             <li
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-123">
-                                <Link prefetch href="/other"><a>Как помочь</a></Link></li>
+                                <Link prefetch href="/about/help"><a>Как помочь</a></Link></li>
                             <li
                                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-121">
                                 <Link prefetch href="/other"><a>Партнеры</a></Link></li>
