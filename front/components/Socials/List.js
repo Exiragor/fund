@@ -10,7 +10,7 @@ const List = ({ size }) => {
     return (
         <span>
             {socials.map(social =>
-                <a className="social-icon" href={social.url} target="_blank" style={{fontSize: size}}>
+                <a className="social-icon" href={social.url} target="_blank" style={{fontSize: size}} key={social.name}>
                     <FontAwesome name={social.name} />
                 </a>
             )}

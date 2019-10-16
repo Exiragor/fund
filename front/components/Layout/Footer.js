@@ -9,8 +9,8 @@ const Footer = () =>
             <span>ОГРН: 1195000002922</span><br />
             <span>ИНН: 5038143310</span><br />
             <span>БИК 044525225</span> <span>в ПАО Сбербанк России</span><br />
-            <span>Р/с 40703810040000005812</span><br />
-            <span>К/с 301018104000000002252</span>
+            <span>Р/с 40701810240000000415</span><br />
+            <span>К/с 30101810400000000225</span>
         </p>
         {/*<p className="text-left"><span><a href="/" className="grey_link" target="_blank">Политика обработки персональных данных</a></span></p>*/}
     </div>
