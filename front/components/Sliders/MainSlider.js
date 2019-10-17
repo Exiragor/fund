@@ -17,7 +17,7 @@ const MainSlider = () => {
 
     const slides = [
         {
-            img: '/static/Maestro2.jpg',
+            img: '/static/Maestro2.JPG',
             title: '',
             text: 'Вокальный проект «Маэстро» - один из приоритетных музыкальных духовно-патриотических проектов, ' +
             'избранных Благотворительным фондом «Наша песня», в качестве объекта оказания всесторонней поддержки. ',
@@ -46,7 +46,7 @@ const MainSlider = () => {
         <div>
             <div className="main-slider__content main-slider__content--left">
                 <div className="background-blur"
-                     style={{ backgroundImage: 'url(/static/Maestro.jpg)' }} />
+                     style={{ backgroundImage: `url("${slides[slideIndex].img}")` }} />
                 <div className="blur_content">
                     {slides[slideIndex].title && <h3>{slides[slideIndex].title}</h3>}
                     {slides[slideIndex].text && <p>{slides[slideIndex].text}</p>}
