@@ -35,7 +35,7 @@ const HelpInfo = () =>
                         Мы с Вами обязательно свяжемся.
                     </p>
                 </div>
-                <div className="img" style={{ backgroundImage: 'url(/static/volonters.jpg)'}}>
+                <div className="img" style={{ backgroundImage: 'url(/static/volonters.JPG)'}}>
                     <p>Делом</p>
                 </div>
             </a>
