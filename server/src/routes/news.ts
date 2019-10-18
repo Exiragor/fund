@@ -1,11 +1,9 @@
 import { Router, Request, Response } from "express";
-import { News } from '../models/News';
-import {getRepository} from 'typeorm';
+import * as newsService from '../services/news';
 
 const newsRouter: Router = Router();
 
-newsRouter.get("/", async (req: Request, res: Response) => {
-    return res.json(await getRepository(News).find());
-});
+newsRouter.get("/", async (req: Request, res: Response): Promise<Response> => 
+    res.json(await newsService.getAll(req.query.page || 1, req.query.count || 20)))
 
 export default newsRouter;

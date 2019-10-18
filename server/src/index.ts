@@ -17,11 +17,10 @@ const startServer = async () => {
         }
     }
     // middlewares
-    app.use(bodyParser.urlencoded({ extended: false }));
+    app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
     app.use(allowCrossDomain);
     app.use(routes);
-
 
     const port = process.env.APP_PORT || '8080';
     app.listen(port, () => console.log(`Application is working on port: http://localhost:${port}`));
