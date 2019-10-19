@@ -3,7 +3,7 @@ import Socials from '../../components/Socials/List';
 export default () => {
     return (
         <div className="wrapper page-contact">
-            <div className="contact-content" style={{minHeight: '680px'}}>
+            <div className="contact-content contact-height">
                 <h1 className="entry-title">Контакты</h1>
                 <div className="entry-content">
                     <div className="contact_title">Благотворительный Фонд «Наша Песня»</div>

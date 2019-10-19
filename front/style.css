@@ -1010,6 +1010,9 @@ footer {
 .grey_link:hover {
     text-decoration: underline;
 }
+.contact-height{ 
+    min-height: 680px;
+}
 .footer.widget {
     display: inline-block;
     width: 29.7%;
@@ -2279,8 +2282,33 @@ img {
     body {
         width: 500px;
     }
+    .slick-prev {
+        left: 10px;
+        z-index: 2;
+        transform: scale(-1, 1) translate(0, -50%);
+        bottom: -15px;
+    }
+    .slick-next {
+        right: 10px;
+        z-index: 2;
+        bottom: 15px;
+    }
+    .main-slider__content--left {
+        position: absolute !important;
+        width: 100% !important;
+    }
+    .main-slider__content--right {
+        width: 100% !important;
+    }
+    .contact-height {
+        min-height: auto;
+    }
+    .partners-slider {
+        width: auto;
+    }
     .header_content {
-        display: block;
+        display: flex;
+        flex-direction: column;
         padding: 22px 20px 16px;
     }
     .header .widget:nth-child(1) {
@@ -2291,7 +2319,10 @@ img {
     .header .widget:not(:first-child) {
         float: right;
         line-height: 23px;
-        text-align: right;
+        text-align: center;
+    }
+    .header p {
+        margin-bottom: 12px;
     }
     .button.widget {
         margin-top: 18px;
@@ -2354,7 +2385,7 @@ img {
         height: inherit;
         padding: 15px 50px;
         box-sizing: border-box;
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: rgba(255, 255, 255, 0.8);
     }
     .content_right .slick-prev:before, .content_right .slick-next:before {
         opacity: 1;
