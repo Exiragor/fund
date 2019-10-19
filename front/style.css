@@ -804,8 +804,8 @@ nav ul {
     color: #006699;
 }
 .single-image {
-    width: auto;
-    height: 400px;
+    width: 100%;
+    height: auto;
     margin-bottom: 30px;
 }
 .news_block {
@@ -1399,6 +1399,7 @@ div.wpcf7-response-output {
     font-size: 18px;
     font-weight: 600;
     text-align: center;
+    margin-top: 25px;
 }
 .other-button {
     display: block;

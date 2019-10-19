@@ -16,7 +16,7 @@ const menu = [
     { name: 'Программы', link: '/programs', children: []},
     { name: 'Услуги', link: '/services', children: []},
     { name: 'Проекты', link: '/other', children: []},
-    { name: 'Новости', link: '/other', children: []},
+    { name: 'Новости', link: '/news', children: []},
     { name: 'Контакты', link: '/contacts', children: []}
 ];
 
