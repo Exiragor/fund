@@ -17,7 +17,7 @@ const Services = () => <div className="content uslugi">
             </div>
         </a>
     </Link>
-    <Link prefetch href="/other">
+    <Link prefetch href="/programs">
         <a>
             <div className="td-3">
                 <img className="home_block_image" src="/static/main/programs.png" />
@@ -29,7 +29,7 @@ const Services = () => <div className="content uslugi">
             </div>
         </a>
     </Link>
-    <Link prefetch href="/other">
+    <Link prefetch href="/services">
         <a>
             <div className="td-3">
                 <img className="home_block_image" src="/static/main/services.png" />

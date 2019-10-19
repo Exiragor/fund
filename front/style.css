@@ -521,7 +521,7 @@ nav ul {
 }
 .content_two .img p {
     position: absolute;
-    right: 40px;
+    left: 40px;
     top: 0px;
     height: 20px;
     font-weight: 700;
