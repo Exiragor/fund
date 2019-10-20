@@ -1,7 +1,7 @@
 <template>
   <el-container>
       <el-aside>
-        test
+        <Menu />
       </el-aside>
     <el-container>
       <el-header>Header!</el-header>
@@ -11,6 +11,15 @@
     </el-container>
   </el-container>
 </template>
+
+<script>
+  import Menu from '@/components/Navigation/Menu';
+
+  export default {
+    components: {Menu},
+    middleware: 'auth',
+  }
+</script>
 
 <style>
 html {
