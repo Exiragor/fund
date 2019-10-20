@@ -1,3 +1,3 @@
-import req from './request';
+import {request} from './request';
 
-export const loginReq = (login, password) => req.post('/auth/login', {login, password});
+export const loginReq = (login, password) => request.post('/auth/login', {login, password});

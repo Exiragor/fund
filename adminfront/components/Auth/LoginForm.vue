@@ -11,6 +11,8 @@
 </template>
 
 <script>
+  import { loginReq } from '@/api/auth';
+
   export default {
     data: () => ({
       login: '',
@@ -18,9 +20,10 @@
     }),
     methods: {
       async loginAction() {
-        let res = await this.$store.dispatch('user/login', { login: this.login, password: this.password });
-        if (res) {
-          this.$router.replace({ path: '/private' });
+        let { data } = await loginReq(this.login, this.password);
+        if (data && data.token) {
+          this.$auth.setUserToken(data.token);
+          this.$router.replace({ path: '/' });
         }
       }
     }

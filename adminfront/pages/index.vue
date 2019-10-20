@@ -1,12 +1,9 @@
 <template>
-  <LoginForm/>
+  <div><h1>Hello to Admin panel!!!!</h1></div>
 </template>
 
 <script>
-import LoginForm from '@/components/Auth/LoginForm';
-
-export default {
-  components: {LoginForm},
-  layout: 'login',
-}
+  export default {
+    middleware: 'auth'
+  }
 </script>
