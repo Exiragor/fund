@@ -3,10 +3,10 @@ import {Entity, Column, PrimaryGeneratedColumn} from "typeorm";
 @Entity()
 export class Image {
 
-    constructor(id: number | null, name: string, filePath: string, isActive: boolean) {
+    constructor(id: number | null, filePath: string, fileType: string, isActive: boolean) {
         this.id = id;
-        this.name = name;
         this.filePath = filePath;
+        this.fileType = fileType;
         this.isActive = isActive;
     }
 
@@ -14,10 +14,10 @@ export class Image {
     id: number|null;
 
     @Column()
-    name: string;
+    filePath: string;
 
     @Column()
-    filePath: string;
+    fileType: string;
 
     @Column()
     isActive: boolean;
