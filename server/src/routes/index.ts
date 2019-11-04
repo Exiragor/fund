@@ -3,6 +3,8 @@ import jwt from 'express-jwt';
 import {privateNewsRouter, newsRouter} from "./news";
 import {imgRouter, privateImgRouter} from './images';
 import authRouter from './auth';
+import env from "dotenv";
+env.config();
 
 const router: Router = Router();
 const privateRouter: Router = Router();

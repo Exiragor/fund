@@ -5,7 +5,7 @@ import * as fs from 'fs';
 
 const getRep: () => Repository<Image> = () => getRepository(Image);
 
-export const saveImg = async (fileName: string, destination: string, fileType: string) => {
+export const saveImg = async (fileName: string, destination: string, fileType: string): Promise<number|null> => {
     const image = new Image(null, destination, fileType, true);
     await getRep().save(image);
 
