@@ -10,7 +10,7 @@
     </el-row>
     <el-row>
       <el-col :span="4">Описание</el-col>
-      <el-col :span="10"><el-input v-model="info.title" type="textarea" :rows="4"></el-input></el-col>
+      <el-col :span="10"><el-input v-model="info.description" type="textarea" :rows="4"></el-input></el-col>
     </el-row>
   </div>
 </template>
