@@ -1,17 +1,16 @@
 <template>
-  <el-row>
+  <div>
     <h1>Добавление новости</h1>
-    <el-col :span="5">Фото новости</el-col>
-    <el-col :span="19"><UploadPhoto /></el-col>
-  </el-row>
+    <NewsFillCard />
+  </div>
 </template>
 
 <script>
-  import UploadPhoto from '@/components/Images/UploadPhoto';
+  import NewsFillCard from '@/components/News/FillCard';
 
   export default {
     components: {
-      UploadPhoto
+      NewsFillCard
     }
   }
 </script>
