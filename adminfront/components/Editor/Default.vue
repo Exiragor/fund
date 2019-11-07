@@ -8,7 +8,7 @@
 
 <script>
   import Editor from '@tinymce/tinymce-vue';
-  import {uploadImage} from '@/api/images'
+  import {uploadFile} from '@/api/files'
 
   export default {
     components: {
@@ -35,11 +35,27 @@
           },
           file_picker_types: 'file image media',
           images_upload_handler: (blobInfo, success, failure) => {
-              uploadImage(this.$auth.getToken('local'), blobInfo.blob())
+              uploadFile(this.$auth.getToken('local'), blobInfo.blob())
                 .then(res => success(res))
                 .catch(err => failure(err))
           },
-          image_description: false
+          image_description: false,
+          media_dimensions: false,
+          file_picker_callback: (cb, value, meta) => {
+            let input = document.createElement('input');
+            let token = this.$auth.getToken('local');
+            input.setAttribute('type', 'file');
+            input.setAttribute('accept', 'audio/* image/*');
+            input.onchange = function() {
+              let file = this.files[0];
+
+              uploadFile(token, file)
+                .then(res => cb(res))
+                .catch(err => cb(err))
+            };
+
+            input.click();
+          }
         },
         value: ''
       }

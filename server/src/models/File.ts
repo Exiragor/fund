@@ -1,7 +1,7 @@
 import {Entity, Column, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
-export class Image {
+export class File {
 
     constructor(id: number | null, filePath: string, fileType: string, isActive: boolean) {
         this.id = id;

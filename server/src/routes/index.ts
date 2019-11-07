@@ -1,7 +1,7 @@
 import {Request, Response, Router} from "express";
 import jwt from 'express-jwt';
 import {privateNewsRouter, newsRouter} from "./news";
-import {imgRouter, privateImgRouter} from './images';
+import {fileRouter, privateFileRouter} from './files';
 import authRouter from './auth';
 import env from "dotenv";
 env.config();
@@ -11,7 +11,7 @@ const privateRouter: Router = Router();
 
 // auth routes
 privateRouter.use(jwt({ secret: process.env.APP_SECRET_KEY || 'test_key' }));
-privateRouter.use('/images', privateImgRouter);
+privateRouter.use('/files', privateFileRouter);
 privateRouter.use('/news', privateNewsRouter);
 
 
@@ -19,7 +19,7 @@ privateRouter.use('/news', privateNewsRouter);
 router.use('/private', privateRouter);
 router.use('/auth', authRouter);
 router.use('/news', newsRouter);
-router.use('/images', imgRouter);
+router.use('/files', fileRouter);
 router.get('/', (req: Request, res: Response) => res.json({ status: 200, text: "Welcome to Api! It's working."}));
 
 

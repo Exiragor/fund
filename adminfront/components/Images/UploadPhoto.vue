@@ -10,7 +10,7 @@
   </el-upload>
 </template>
 <script>
-  import {uploadImage} from '@/api/images'
+  import {uploadFile} from '@/api/files'
   export default {
     data() {
       return {
@@ -22,7 +22,7 @@
     },
     methods: {
       uploadFile({file}) {
-        uploadImage(this.$auth.getToken('local'), file).then(res => {
+        uploadFile(this.$auth.getToken('local'), file).then(res => {
           this.imageUrl = res + '/178/178';
         });
       }
