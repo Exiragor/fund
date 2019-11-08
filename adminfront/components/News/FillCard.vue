@@ -2,7 +2,7 @@
   <div>
     <el-row class="mb-3">
       <el-col :span="4">Фото новости</el-col>
-      <el-col :span="20"><UploadPhoto /></el-col>
+      <el-col :span="20"><UploadPhoto :on-change-img="onCnangeImage" /></el-col>
     </el-row>
     <el-row class="mb-3">
       <el-col :span="4">Дата новости</el-col>
@@ -10,6 +10,8 @@
         <el-date-picker
           v-model="info.date"
           type="date"
+          format="dd MMMM yyyy"
+          value-format="dd MMMM yyyy"
           placeholder="Выбрать дату">
         </el-date-picker>
       </el-col>
@@ -44,9 +46,21 @@
       info: {
         title: '',
         description: '',
-        date: '',
-        text: ''
+        date: ''
       }
-    })
+    }),
+    methods: {
+      onCnangeImage(imageId) {
+        this.$store.dispatch('news/updateCurrent', { news: { photo: imageId } })
+      }
+    },
+    watch: {
+      'info': {
+        deep: true,
+        handler() {
+          this.$store.dispatch('news/updateCurrent', { news: this.info });
+        }
+      },
+    }
   }
 </script>

@@ -12,19 +12,32 @@
 <script>
   import {uploadFile} from '@/api/files'
   export default {
+    props: {
+      onChangeImg: {
+        type: Function,
+        default: (imageId) => {}
+      }
+    },
     data() {
       return {
         dialogImageUrl: '',
         dialogVisible: false,
         disabled: false,
-        imageUrl: ''
+        imageUrl: '',
+        imageId: 0
       };
     },
     methods: {
       uploadFile({file}) {
         uploadFile(this.$auth.getToken('local'), file).then(res => {
-          this.imageUrl = res + '/178/178';
+          this.imageUrl = res.url + '/178/178';
+          this.imageId = res.id;
         });
+      }
+    },
+    watch: {
+      'imageUrl': function() {
+        this.onChangeImg(this.imageId)
       }
     }
   }

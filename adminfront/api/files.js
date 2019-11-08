@@ -10,5 +10,5 @@ export const uploadFile = async (token, file) => {
   });
   const host = process.env.API_URL || 'http://localhost:8000';
 
-  return host + `/files/${data}`
+  return { url: host + `/files/${data}`, id: data };
 }

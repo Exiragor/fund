@@ -36,7 +36,7 @@
           file_picker_types: 'file image media',
           images_upload_handler: (blobInfo, success, failure) => {
               uploadFile(this.$auth.getToken('local'), blobInfo.blob())
-                .then(res => success(res))
+                .then(res => success(res.url))
                 .catch(err => failure(err))
           },
           image_description: false,
@@ -50,7 +50,7 @@
               let file = this.files[0];
 
               uploadFile(token, file)
-                .then(res => cb(res))
+                .then(res => cb(res.url))
                 .catch(err => cb(err))
             };
 
@@ -58,6 +58,11 @@
           }
         },
         value: ''
+      }
+    },
+    watch: {
+      'value': function() {
+        this.$store.dispatch('news/updateCurrent', { news: { text: this.value } });
       }
     }
   }

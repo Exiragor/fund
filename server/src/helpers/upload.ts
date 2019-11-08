@@ -14,7 +14,7 @@ let storage = multer.diskStorage({
         const hash = md5(file.originalname + Date.now());
         const filePath: string = path.join(
             process.cwd(),
-            `uploads/images/${year}/${month}/${hash}/`
+            `uploads/${year}/${month}/${hash}/`
         );
         if (!fs.existsSync(filePath)){
             fs.mkdirSync(filePath, { recursive: true });
