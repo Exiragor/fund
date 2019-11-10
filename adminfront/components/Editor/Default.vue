@@ -14,6 +14,12 @@
     components: {
       Editor
     },
+    props: {
+      initValue: {
+        type: String,
+        default: ''
+      }
+    },
     data() {
       return {
         initOptions: {
@@ -64,6 +70,9 @@
       'value': function() {
         this.$store.dispatch('news/updateCurrent', { news: { text: this.value } });
       }
+    },
+    mounted() {
+      this.value = this.initValue;
     }
   }
 </script>

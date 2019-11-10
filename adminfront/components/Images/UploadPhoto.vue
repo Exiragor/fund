@@ -10,12 +10,16 @@
   </el-upload>
 </template>
 <script>
-  import {uploadFile} from '@/api/files'
+  import {uploadFile} from '@/api/files';
+  import {getImgUrlByIdWithParams} from '@/helpers/index';
   export default {
     props: {
       onChangeImg: {
         type: Function,
         default: (imageId) => {}
+      },
+      id: {
+        type: Number
       }
     },
     data() {
@@ -38,6 +42,12 @@
     watch: {
       'imageUrl': function() {
         this.onChangeImg(this.imageId)
+      }
+    },
+    mounted() {
+      this.imageId = this.id || 0;
+      if (this.imageId > 0) {
+        this.imageUrl = getImgUrlByIdWithParams(this.imageId, { width: 178, height: 178 });
       }
     }
   }

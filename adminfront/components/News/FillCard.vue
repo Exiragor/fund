@@ -2,7 +2,7 @@
   <div>
     <el-row class="mb-3">
       <el-col :span="4">Фото новости</el-col>
-      <el-col :span="20"><UploadPhoto :on-change-img="onCnangeImage" /></el-col>
+      <el-col :span="20"><UploadPhoto :id="news.photo" :on-change-img="onChangeImage" /></el-col>
     </el-row>
     <el-row class="mb-3">
       <el-col :span="4">Дата новости</el-col>
@@ -24,10 +24,10 @@
       <el-col :span="4">Описание</el-col>
       <el-col :span="10"><el-input v-model="info.description" type="textarea" :rows="4"></el-input></el-col>
     </el-row>
-    <el-row>
+    <el-row class="mb-3">
       <el-col :span="4">Основной текст</el-col>
       <el-col :span="15">
-        <editor />
+        <editor :init-value="news.text" />
       </el-col>
     </el-row>
   </div>
@@ -42,6 +42,11 @@
       UploadPhoto,
       Editor
     },
+    props: {
+      news: {
+        type: Object,
+      }
+    },
     data: () => ({
       info: {
         title: '',
@@ -50,8 +55,8 @@
       }
     }),
     methods: {
-      onCnangeImage(imageId) {
-        this.$store.dispatch('news/updateCurrent', { news: { photo: imageId } })
+      onChangeImage(imageId) {
+        this.$store.dispatch('news/updateCurrent', { news: { photo: imageId } });
       }
     },
     watch: {
@@ -61,6 +66,12 @@
           this.$store.dispatch('news/updateCurrent', { news: this.info });
         }
       },
+    },
+    mounted() {
+      if (this.news) {
+        let {title, description, date} = this.news;
+        this.info = {title, description, date};
+      }
     }
   }
 </script>
