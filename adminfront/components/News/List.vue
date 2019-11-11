@@ -48,12 +48,14 @@
       }
     },
     methods: {
-      handleEdit(row) {
-        this.$store.dispatch('news/updateCurrent', { news: row });
-        this.$router.push(`/news/${row.id}/edit`);
+      handleEdit(item) {
+        this.$store.dispatch('news/updateCurrent', { news: item });
+        this.$router.push(`/news/${item.id}/edit`);
       },
-      handleDelete() {
-
+      handleDelete(index, item) {
+        const { id } = item;
+        const token = this.$auth.getToken('local');
+        this.$store.dispatch('news/deleteNews', {id, token, index});
       },
       getImg(id, params) {
         return getImgUrlByIdWithParams(id, params);

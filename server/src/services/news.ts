@@ -3,7 +3,7 @@ import { News } from '../models/News';
 
 const getRep: () => Repository<News> = () => getRepository(News);
 
-export const getAll = async (page: number, count: number = 20) => {
+export const getAll = async (page: number, count: number = 20): Promise<{items: News[], total: number}> => {
     return {
         items: await getRep().find({
             take: count,
@@ -11,7 +11,7 @@ export const getAll = async (page: number, count: number = 20) => {
             where: { isActive: true },
             order: { id: "DESC" }
         }),
-        total: Math.ceil(await getRep().count() / count)
+        total: await getRep().count()
     }
 };
 
@@ -27,3 +27,15 @@ export const addNews = async (
 
     return news.id;
 };
+
+export const getOne = async (id: number): Promise<News> => {
+    return await getRep().findOneOrFail(id);
+};
+
+export const updateNews = async (id: number, news: News) => {
+    return await getRep().update(id, {...news});
+};
+
+export const deleteNews = async (id: number) => {
+    return await getRep().delete(id);
+}

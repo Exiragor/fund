@@ -7,6 +7,7 @@
       background
       layout="prev, pager, next"
       :page-size="count"
+      :current-page="page"
       @current-change="handlePageChange"
       :total="pagesTotal">
     </el-pagination>
@@ -26,6 +27,9 @@
     computed: {
       pagesTotal() {
         return this.$store.getters['news/total'];
+      },
+      page() {
+        return +this.$route.params.id;
       }
     },
     methods: {
@@ -34,7 +38,7 @@
       }
     },
     mounted() {
-      this.$store.dispatch('news/loadNews', { page: 1, count: this.count });
+      this.$store.dispatch('news/loadNews', { page: this.page || 1, count: this.count });
     }
   }
 </script>

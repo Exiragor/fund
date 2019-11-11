@@ -1,4 +1,4 @@
-import {createNews, getNews} from '@/api/news';
+import {createNews, getNews, getOneNews, deleteNews} from '@/api/news';
 
 export const state = () => ({
   list: [],
@@ -23,6 +23,14 @@ export const actions = {
     const { data } = await getNews({ page, count });
     commit('setNews', data.items);
     commit('setTotalCount', data.total);
+  },
+  async loadOneNews({commit}, { id }) {
+    const { data } = await getOneNews(id);
+    commit('setCurrentNews', data);
+  },
+  async deleteNews({commit}, { id, index, token }) {
+    await deleteNews({id, token});
+    commit('deleteNews', index);
   }
 };
 
@@ -36,6 +44,9 @@ export const mutations = {
   },
   setTotalCount(state, count) {
     state.total = count;
+  },
+  deleteNews(state, index) {
+    state.list.splice(index, 1);
   }
 };
 

@@ -2,7 +2,7 @@
   <div>
     <el-row class="mb-3">
       <el-col :span="4">Фото новости</el-col>
-      <el-col :span="20"><UploadPhoto :id="news.photo" :on-change-img="onChangeImage" /></el-col>
+      <el-col :span="20"><UploadPhoto :id="news && news.photo" :on-change-img="onChangeImage" /></el-col>
     </el-row>
     <el-row class="mb-3">
       <el-col :span="4">Дата новости</el-col>
@@ -27,7 +27,7 @@
     <el-row class="mb-3">
       <el-col :span="4">Основной текст</el-col>
       <el-col :span="15">
-        <editor :init-value="news.text" />
+        <editor :init-value="news && news.text" />
       </el-col>
     </el-row>
   </div>
