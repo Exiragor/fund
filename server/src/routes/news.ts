@@ -12,7 +12,7 @@ newsRouter.get('/:id',async (req: Request, res: Response): Promise<Response> =>
 
 privateNewsRouter.post('/', async (req: Request, res: Response) => {
     const {title, date, description, text, photo} = req.body;
-    let id = await newsService.addNews(title, date, description, text, photo);
+    const id = await newsService.addNews(title, date, description, text, photo);
     return res.send(`${id}`);
 });
 

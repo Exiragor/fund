@@ -38,4 +38,4 @@ export const updateNews = async (id: number, news: News) => {
 
 export const deleteNews = async (id: number) => {
     return await getRep().delete(id);
-}
+};
