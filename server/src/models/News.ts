@@ -3,7 +3,7 @@ import {Entity, Column, PrimaryGeneratedColumn} from "typeorm";
 @Entity()
 export class News {
 
-    constructor(id: number|null, title: string, date: string, desc: string, text: string, photo: string, isActive: boolean) {
+    constructor(id: number|null, title: string, date: Date, desc: string, text: string, photo: string, isActive: boolean) {
         this.id = id;
         this.title = title;
         this.date = date;
@@ -20,7 +20,7 @@ export class News {
     title: string;
 
     @Column()
-    date: string;
+    date: Date;
 
     @Column()
     description: string;

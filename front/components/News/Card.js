@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import {getImgUrlByIdWithParams} from '../../helpers/index';
+import {dateFormat} from '../../helpers/index';
 
 const NewsCard = ({ news }) => 
     <div className="news_block">
@@ -7,7 +8,7 @@ const NewsCard = ({ news }) =>
             <img className="news-image" src={getImgUrlByIdWithParams(news.photo, {width: 900, height: 600})} alt={news.title} />
         </div>
         <div className="news_content">
-            <div className="news-date">{news.date}</div>
+            <div className="news-date">{dateFormat(news.date)}</div>
             <Link prefetch href={`/news/detail?id=${news.id}`}>
                 <a>
                     <h3 className="news-title entry-title">{news.title}</h3>

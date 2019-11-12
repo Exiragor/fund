@@ -798,6 +798,10 @@ nav ul {
 .services-content {
     padding: 20px;
 }
+
+.page-numbers.disabled {
+    display: none;
+}
 .readmore {
     font-family: 'PT Sans Regular', 'Arial';
     font-weight: 400;
@@ -818,7 +822,7 @@ nav ul {
     margin-right: 28px;
 }
 .news-date {
-    color: #CCCCCC;
+    color: #000;
 }
 .news-title {
     font-size: 20px !important;

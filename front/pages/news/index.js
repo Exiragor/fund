@@ -10,17 +10,18 @@ export default () => {
     const [news, setNews] = useState(null);
     const [pages, setPages] = useState(1);
     const router = useRouter();
-    const { page } = router.query;
+    let { page } = router.query;
+    page = page || 1;
 
     useEffect(() => {
         getNews({ page, count }).then(res => {
             setNews(res.data.items);
             setPages(res.data.total);
         });
-    }, []);
+    }, [router]);
 
     const changePageHandler = (num) => {
-        console.log(num);
+        router.push(`/news?page=${num}`);
     };
 
     return (
@@ -28,7 +29,7 @@ export default () => {
             <h1 className="entry-title">Новости</h1>
             <div className="entry-content with-sidebar">
                 <NewsList news={news} />
-                <Pagination current-page="1" total={pages} count={count} change-page={changePageHandler} />
+                <Pagination currentPage={+page} total={+pages} count={count} changePage={changePageHandler} />
             </div>
             <Aside sections={[{ name: 'Шаг за шагом', url: '/news'}]} currentPage="Шаг за шагом" />
         </div>

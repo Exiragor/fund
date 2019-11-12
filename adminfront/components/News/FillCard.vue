@@ -11,7 +11,6 @@
           v-model="info.date"
           type="date"
           format="dd MMMM yyyy"
-          value-format="dd MMMM yyyy"
           placeholder="Выбрать дату">
         </el-date-picker>
       </el-col>
@@ -51,7 +50,8 @@
       info: {
         title: '',
         description: '',
-        date: ''
+        date: '',
+        timestamp: new Date()
       }
     }),
     methods: {

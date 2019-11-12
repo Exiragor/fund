@@ -9,7 +9,7 @@ export const getAll = async (page: number, count: number = 20): Promise<{items: 
             take: count,
             skip: page > 0 && --page * count || 0,
             where: { isActive: true },
-            order: { id: "DESC" }
+            order: { date: "DESC" }
         }),
         total: await getRep().count()
     }
@@ -17,10 +17,10 @@ export const getAll = async (page: number, count: number = 20): Promise<{items: 
 
 export const addNews = async (
     title: string,
-    date: string,
+    date: Date,
     desc: string,
     text: string,
-    photo: string
+    photo: string,
 ): Promise<number|null> => {
     const news = new News(null, title, date, desc, text, photo, true);
     await getRep().save(news);

@@ -4,7 +4,7 @@
   "description": "Front side of fund project",
   "main": "/pages/index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 4000",
     "build": "next build",
     "start": "next start -p 4001"
   },
@@ -13,6 +13,7 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "classnames": "^2.2.6",
+    "dateformat": "^3.0.3",
     "mobx": "^5.10.1",
     "mobx-react": "^6.1.1",
     "next": "^8.1.0",

@@ -26,7 +26,7 @@ const Pagination = ({ currentPage, total, count, changePage }) => {
         <nav>
             <div className="navigation">
                 <span className={previousPage} onClick={() => changePage(currentPage - 1)}>
-                   Previous
+                   Предыдущая
                 </span>
                 { currentPage - 1 > 1 &&
                 <span className="page-numbers" onClick={() => changePage(1)}>
@@ -54,7 +54,7 @@ const Pagination = ({ currentPage, total, count, changePage }) => {
                 </span>
                 }
                 <span className={nextPage} onClick={() => changePage(currentPage + 1)}>
-                   Next
+                   Следующая
                 </span>
             </div>
         </nav>
