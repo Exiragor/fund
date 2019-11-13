@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import Slider from 'react-slick';
 import Link from 'next/link';
+import {getImgUrlByIdWithParams, getImgUrlById} from '../../helpers/index'
 
-const MainSlider = () => {
+const MainSlider = ({ slides }) => {
     const [slideIndex, setSlideIndex] = useState(0);
     const settings = {
         autoplay: true,
@@ -15,39 +16,11 @@ const MainSlider = () => {
         beforeChange: (oldIndex, newIndex) => setSlideIndex(newIndex)
     };
 
-    const slides = [
-        {
-            img: '/static/Maestro2.JPG',
-            title: 'Вокальный проект «Маэстро»',
-            text: 'один из приоритетных музыкальных духовно-патриотических проектов, ' +
-            'избранных Благотворительным фондом «Наша песня», в качестве объекта оказания всесторонней поддержки. ',
-            url: '/programs'
-        },
-        {
-            img: '/static/logo.jpg',
-            title: 'Гимн фонда',
-            text: 'Гимн и эмблема (логотип) фонда – характерный знак серьезной, ' +
-            'авторитетной организации. Если Официальный сайт и страницы в' +
-            'социальных сетях – явление распространенное, то наличие собственного гимна – пока воспринимается ' +
-            'как роскошь, а зря…',
-            url: '/services'
-        },
-        {
-            img: '/static/fund.jpg',
-            title: '«Наша песня»',
-            text: 'Предметом деятельности нашего фонда является разработка и реализация духовных, ' +
-            'патриотических, культурных программ и социальных проектов, направленных на оздоровление общества, ' +
-            'а если конкретно – «вывод из подполья» потрясающе красивых, содержательных и полезных ' +
-            'в воспитательном смысле, современных песен. ',
-            url: '/about/fond'
-        }
-    ];
-
     return (
         <div>
             <div className="main-slider__content main-slider__content--left">
                 <div className="background-blur"
-                     style={{ backgroundImage: `url("${slides[slideIndex].img}")` }} />
+                     style={{ backgroundImage: `url("${getImgUrlByIdWithParams(slides[slideIndex].photo, {width: 360, height: 500})}")` }} />
                 <div className="blur_content">
                     {slides[slideIndex].title && <h3>{slides[slideIndex].title}</h3>}
                     {slides[slideIndex].text && <p>{slides[slideIndex].text}</p>}
@@ -63,10 +36,10 @@ const MainSlider = () => {
             <div className="main-slider__content main-slider__content--right">
                 <Slider {...settings}>
                     {slides.map(slide =>
-                        <div key={slide.img}>
+                        <div key={slide.photo}>
                             <div
                                 className="main-slider__slide"
-                                style={{ backgroundImage: `url("${slide.img}")` }}
+                                style={{ backgroundImage: `url("${getImgUrlById(slide.photo)}")` }}
                             />
                         </div>
                     )}

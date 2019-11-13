@@ -1,15 +1,15 @@
 import {getRepository, Repository} from 'typeorm';
 import { Slide } from '../models/Slide';
-import {News} from "../models/News";
 
 const getRep: () => Repository<Slide> = () => getRepository(Slide);
 
 export const getSlider = async (sliderName: string) => {
-    return await getRep().find({ where: { isActive: true, sliderName }, order: { id: 'DESC' }});
+    return await getRep().find({ where: { isActive: true, sliderName }, order: { order: 'ASC', id: 'DESC' }});
 };
 
 export const addSlide = async (params: Slide): Promise<number|null> => {
     const slide = {...params};
+    slide.isActive = true;
     await getRep().save(slide);
 
     return slide.id;

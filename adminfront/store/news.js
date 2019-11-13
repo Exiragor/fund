@@ -54,4 +54,4 @@ export const getters = {
   newsList: (state) => state.list,
   currentNews: (state) => state.currentNews,
   total: (state) => state.total
-}
+};

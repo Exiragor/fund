@@ -50,8 +50,7 @@
       info: {
         title: '',
         description: '',
-        date: '',
-        timestamp: new Date()
+        date: ''
       }
     }),
     methods: {
