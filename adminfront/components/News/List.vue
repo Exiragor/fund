@@ -53,9 +53,19 @@
         this.$router.push(`/news/${item.id}/edit`);
       },
       handleDelete(index, item) {
-        const { id } = item;
-        const token = this.$auth.getToken('local');
-        this.$store.dispatch('news/deleteNews', {id, token, index});
+        this.$confirm('Это действие удалит новость навсегда. Продолжить?', 'Предупреждение', {
+          confirmButtonText: 'Да',
+          cancelButtonText: 'Отменить',
+          type: 'warning'
+        }).then(() => {
+          const { id } = item;
+          const token = this.$auth.getToken('local');
+          this.$store.dispatch('news/deleteNews', {id, token, index});
+          this.$message({
+            type: 'success',
+            message: 'Новость успешно удалена'
+          });
+        }).catch(() => {});
       },
       getImg(id, params) {
         return getImgUrlByIdWithParams(id, params);

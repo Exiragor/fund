@@ -32,6 +32,10 @@
         const news = this.currentNews;
         const token = this.$auth.getToken('local');
         await updateNews({ id, news, token });
+        this.$message({
+          type: 'success',
+          message: 'Новость успешно изменена'
+        });
         this.$router.push('/news');
       }
     }

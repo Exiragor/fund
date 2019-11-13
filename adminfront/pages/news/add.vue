@@ -20,6 +20,10 @@
     methods: {
       createNews() {
         this.$store.dispatch('news/createNewOne', { token: this.$auth.getToken('local') });
+        this.$message({
+          type: 'success',
+          message: 'Новость успешно добавлена'
+        });
         this.$router.push('/news');
       }
     }

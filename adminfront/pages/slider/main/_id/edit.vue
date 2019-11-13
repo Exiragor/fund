@@ -32,6 +32,10 @@
         const slide = this.currentSlide;
         const token = this.$auth.getToken('local');
         await update({ id, slide, token });
+        this.$message({
+          type: 'success',
+          message: 'Слайд успешно изменен'
+        });
         this.$router.push('/slider/main');
       }
     }

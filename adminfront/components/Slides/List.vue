@@ -53,9 +53,19 @@
         this.$router.push(`/slider/main/${item.id}/edit`);
       },
       handleDelete(index, item) {
-        const { id } = item;
-        const token = this.$auth.getToken('local');
-        this.$store.dispatch('slides/del', {id, token, index});
+        this.$confirm('Это действие удалит слайд навсегда. Продолжить?', 'Предупреждение', {
+          confirmButtonText: 'Да',
+          cancelButtonText: 'Отменить',
+          type: 'warning'
+        }).then(() => {
+          const { id } = item;
+          const token = this.$auth.getToken('local');
+          this.$store.dispatch('slides/del', {id, token, index});
+          this.$message({
+            type: 'success',
+            message: 'Слайд успешно удален'
+          });
+        }).catch(() => {});
       },
       getImg(id, params) {
         return getImgUrlByIdWithParams(id, params);

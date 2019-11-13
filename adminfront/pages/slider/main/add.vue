@@ -20,6 +20,10 @@
     methods: {
       createNews() {
         this.$store.dispatch('slides/createNewOne', { token: this.$auth.getToken('local'), sliderName: 'main' });
+        this.$message({
+          type: 'success',
+          message: 'Слайд успешно добавлен'
+        });
         this.$router.push('/slider/main');
       }
     }
