@@ -25,7 +25,15 @@ const MainSlider = ({ slides }) => {
                     {slides[slideIndex].title && <h3>{slides[slideIndex].title}</h3>}
                     {slides[slideIndex].text && <p>{slides[slideIndex].text}</p>}
                     {slides[slideIndex].url &&
-                        <Link prefetch href={slides[slideIndex].url}>
+                        <a href={slides[slideIndex].url}
+                           target="_blank"
+                           className="button text-center button--main-slider"
+                        >
+                            <span>Подробнее</span>
+                        </a>
+                    }
+                    {!slides[slideIndex].url && slides[slideIndex].link &&
+                        <Link prefetch href={slides[slideIndex].link}>
                             <a className="button text-center button--main-slider">
                                 <span>Подробнее</span>
                             </a>
