@@ -26,7 +26,7 @@
     <el-row class="mb-3">
       <el-col :span="4">Основной текст</el-col>
       <el-col :span="15">
-        <editor :init-value="news && news.text" />
+        <editor :init-value="news && news.text" :change-handler="textChangeHandler" />
       </el-col>
     </el-row>
   </div>
@@ -56,6 +56,9 @@
     methods: {
       onChangeImage(imageId) {
         this.$store.dispatch('news/updateCurrent', { news: { photo: imageId } });
+      },
+      textChangeHandler(value) {
+        this.$store.dispatch('news/updateCurrent', { news: { text: value } });
       }
     },
     watch: {

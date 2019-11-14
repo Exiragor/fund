@@ -28,13 +28,11 @@
 </template>
 
 <script>
-  import Editor from '../Editor/Default';
   import UploadPhoto from '../Images/UploadPhoto';
 
   export default {
     components: {
-      UploadPhoto,
-      Editor
+      UploadPhoto
     },
     props: {
       item: {

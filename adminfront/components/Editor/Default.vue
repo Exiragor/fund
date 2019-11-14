@@ -18,6 +18,10 @@
       initValue: {
         type: String,
         default: ''
+      },
+      changeHandler: {
+        type: Function,
+        default: () => {}
       }
     },
     data() {
@@ -68,6 +72,7 @@
     },
     watch: {
       'value': function() {
+        this.changeHandler(this.value);
         this.$store.dispatch('news/updateCurrent', { news: { text: this.value } });
       }
     },

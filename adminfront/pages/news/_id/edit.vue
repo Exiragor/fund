@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Редактирование новости новости</h1>
-    <NewsFillCard :news="currentNews" />
+    <NewsFillCard :news="currentNews" change- />
     <el-row>
       <el-col :offset="9" :span="5">
         <el-button type="success" @click="updateNews">Изменить новость</el-button>
@@ -37,6 +37,9 @@
           message: 'Новость успешно изменена'
         });
         this.$router.push('/news');
+      },
+      textChangeHandler(value) {
+        this.$store.dispatch('news/updateCurrent', { news: { text: value } });
       }
     }
   }
