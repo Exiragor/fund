@@ -13,9 +13,9 @@ const menu = [
         ]
     },
     { name: 'Маэстро', link: '/other', children: []},
-    { name: 'Программы', link: '/programs', children: []},
+    { name: 'Программы', link: '/other', children: []},
     { name: 'Услуги', link: '/services', children: []},
-    { name: 'Проекты', link: '/other', children: []},
+    { name: 'Проекты', link: '/projects', children: []},
     { name: 'Новости', link: '/news', children: []},
     { name: 'Контакты', link: '/contacts', children: []}
 ];

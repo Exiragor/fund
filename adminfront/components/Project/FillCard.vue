@@ -43,6 +43,7 @@
       info: {
         name: '',
         description: '',
+        link: '',
         order: null
       }
     }),

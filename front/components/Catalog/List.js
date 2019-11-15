@@ -2,5 +2,5 @@ import Card from './Card';
 
 export default ({ services }) => 
 <div>
-    {services.map(service => <Card key={service.title} service={service} />)}
+    {services.map(service => <Card key={service.name} service={service} />)}
 </div>
