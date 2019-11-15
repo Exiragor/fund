@@ -19,6 +19,7 @@ const startServer = async () => {
     // middlewares
     app.use(cors({
         origin: ['http://oursong.exiragor.pw', 'http://нашапесня.рф/'],
+        credentials: true,
     }));
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
