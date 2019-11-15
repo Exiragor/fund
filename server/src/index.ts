@@ -3,7 +3,7 @@ import express from 'express';
 import "reflect-metadata";
 import {Connection, createConnection} from "typeorm";
 import bodyParser from 'body-parser';
-import cors from "cors";
+const cors = require('cors');
 import routes from './routes';
 
 const startServer = async () => {
@@ -18,7 +18,7 @@ const startServer = async () => {
     }
     // middlewares
     app.use(cors({
-        origin: '*',
+        origin: ['http://oursong.exiragor.pw', 'http://нашапесня.рф/'],
     }));
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
