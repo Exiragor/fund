@@ -1,4 +1,5 @@
 import {authReq} from './request';
+import {gethost} from '../helpers/index';
 
 export const uploadFile = async (token, file) => {
   const formData = new FormData();
@@ -8,7 +9,7 @@ export const uploadFile = async (token, file) => {
       'Content-Type': 'multipart/form-data'
     }
   });
-  const host = process.env.API_URL || 'http://localhost:8000';
+  const host = gethost();
 
   return { url: host + `/files/${data}`, id: data };
 }
