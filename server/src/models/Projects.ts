@@ -33,13 +33,13 @@ export class Projects {
     @Column({type: "text"})
     text: string;
 
-    @Column()
+    @Column({nullable: true})
     link: string;
 
     @Column()
     photo: string;
 
-    @Column()
+    @Column({nullable: true})
     order: number;
 
     @Column()

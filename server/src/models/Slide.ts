@@ -31,19 +31,19 @@ export class Slide {
     @Column()
     sliderName: string;
 
-    @Column()
+    @Column({nullable: true})
     link: string;
 
-    @Column()
+    @Column({nullable: true})
     url: string;
 
-    @Column()
+    @Column({nullable: true})
     title: string;
 
-    @Column()
+    @Column({nullable: true})
     text: string;
 
-    @Column()
+    @Column({nullable: true})
     order: number;
 
     @Column()
