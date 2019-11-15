@@ -1,6 +1,7 @@
-import axios from 'axios'
+import axios from 'axios';
+import {gethost} from '../helpers';
 
-const host = process.env.API_URL || 'http://localhost:8000';
+const host = gethost();
 
 export const request = axios.create({
   baseURL: `${host}/`
