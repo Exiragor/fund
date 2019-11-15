@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc && node build/index"
+    "dev": "tsc && node build/index",
+    "migrate": "tsc && node build/migration"
   },
   "author": "Alex Lebedev",
   "license": "ISC",
