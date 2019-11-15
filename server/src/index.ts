@@ -3,15 +3,15 @@ import express from 'express';
 import "reflect-metadata";
 import {Connection, createConnection} from "typeorm";
 import bodyParser from 'body-parser';
-import {allowCrossDomain} from './middlewares/index';
+import {allowCrossDomain} from './middlewares';
 import routes from './routes';
 
 const startServer = async () => {
     env.config();
     let app = express();
     //init db connection
+    const dbConn: Connection = await createConnection();
     if (process.env.APP_MODE == 'development') {
-        const dbConn: Connection = await createConnection();
         if (dbConn) {
             await dbConn.runMigrations();
         }
