@@ -55,6 +55,6 @@ const MainSlider = ({ slides }) => {
             </div>
         </div>
     );
-}
+};
 
 export default MainSlider;

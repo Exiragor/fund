@@ -1,7 +1,8 @@
 [
   { "link": "/", "name": "Главная", "icon": "s-home" },
   { "link": "/news", "name": "Новости", "icon": "connection" },
-  { "link": "/services", "name": "Услуги", "icon": "s-shop" },
+  { "link": "/projects/service", "name": "Услуги", "icon": "s-shop" },
+  { "link": "/projects/project", "name": "Проекты", "icon": "s-shop" },
   { "link": "/slider/main", "name": "Слайдер на главной", "icon": "connection" },
   { "link": "/content", "name": "Блоки контента", "icon": "s-shop" }
 ]
