@@ -3,7 +3,7 @@ import express from 'express';
 import "reflect-metadata";
 import {Connection, createConnection} from "typeorm";
 import bodyParser from 'body-parser';
-const cors = require('cors');
+import {allowCrossDomain} from './middlewares/index';
 import routes from './routes';
 
 const startServer = async () => {
@@ -17,12 +17,9 @@ const startServer = async () => {
         }
     }
     // middlewares
-    app.use(cors({
-        origin: ['http://oursong.exiragor.pw', 'http://нашапесня.рф/'],
-        credentials: true,
-    }));
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
+    app.use(allowCrossDomain);
     app.use(routes);
 
     const port = process.env.APP_PORT || '8080';
