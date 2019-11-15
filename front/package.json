@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next -p 4000",
     "build": "next build",
-    "start": "next start -p 4001"
+    "start": "cross-env API_URL=fundapi.exiragor.pw next start -p 4001"
   },
   "author": "",
   "license": "ISC",
