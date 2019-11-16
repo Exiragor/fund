@@ -14,7 +14,7 @@ dateformat.i18n = {
 };
 dateformat.masks.default = "dd mmmm  yyyy";
 
-const host = 'http://fundapi.exiragor.pw';
+const host = 'http://fund.exiragor.pw';
 export const gethost = () => host;
 export const getImgUrlById = (id) => host + `/files/${id}`;
 export const getImgUrlByIdWithParams = (id, {width, height}) => host + `/files/${id}/${width}/${height}`;
