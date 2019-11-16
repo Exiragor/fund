@@ -27,7 +27,7 @@ export class Projects {
     @Column()
     category: string;
 
-    @Column()
+    @Column({type: "text"})
     description: string;
 
     @Column({type: "text"})

@@ -40,7 +40,7 @@ export class Slide {
     @Column({nullable: true})
     title: string;
 
-    @Column({nullable: true})
+    @Column({type: "text", nullable: true})
     text: string;
 
     @Column({nullable: true})

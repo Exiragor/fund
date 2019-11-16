@@ -22,7 +22,7 @@ export class News {
     @Column()
     date: Date;
 
-    @Column()
+    @Column({type: "text"})
     description: string;
 
     @Column({type: "text"})
