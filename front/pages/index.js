@@ -2,7 +2,7 @@ import Services from '../components/Main/Services';
 import HelpInfo from '../components/Main/HelpInfo';
 import MainSlider from '../components/Sliders/MainSlider';
 import PartnersSlider from '../components/Sliders/PartnersSlider';
-import {getAll} from '../../adminfront/api/slides';
+import {getAll} from '../api/slides';
 import {useEffect, useState} from "react";
 
 const Home = () => {

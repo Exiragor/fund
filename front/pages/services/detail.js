@@ -1,7 +1,7 @@
 import Detail from '../../components/Catalog/Detail';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import {getOne} from '../../../adminfront/api/projects';
+import {getOne} from '../../api/projects';
 
 const ServiceDetail = () => {
     const router = useRouter();

@@ -46,7 +46,7 @@ export class Slide {
     @Column({nullable: true})
     order: number;
 
-    @Column()
+    @Column({nullable: true})
     photo: string;
 
     @Column()

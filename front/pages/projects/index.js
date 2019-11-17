@@ -1,5 +1,5 @@
 import Projects from '../../components/Catalog/List';
-import {getAll} from '../../../adminfront/api/projects';
+import {getAll} from '../../api/projects';
 import {useEffect, useState} from "react";
 
 export default () => {

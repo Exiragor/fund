@@ -1,7 +1,7 @@
 import Aside from '../../components/Navigation/Aside';
 import {menu} from './menu';
 import { useEffect, useState } from 'react';
-import {getOne} from '../../../adminfront/api/content';
+import {getOne} from '../../api/content';
 
 const aboutFondPage = () => {
 

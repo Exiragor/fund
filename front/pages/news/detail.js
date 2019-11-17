@@ -1,7 +1,7 @@
 import Detail from '../../components/Catalog/Detail';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import {getOneNews} from '../../../adminfront/api/news';
+import {getOneNews} from '../../api/news';
 
 const NewsDetail = () => {
     const router = useRouter();

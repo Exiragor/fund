@@ -3,7 +3,7 @@ import Aside from '../../components/Navigation/Aside';
 import Pagination from '../../components/Navigation/Pagination';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import {getNews} from '../../../adminfront/api/news';
+import {getNews} from '../../api/news';
 
 export default () => {
     const count = 10;
@@ -18,6 +18,7 @@ export default () => {
             setNews(res.data.items);
             setPages(res.data.total);
         });
+        console.log(process.env);
     }, [router]);
 
     const changePageHandler = (num) => {
