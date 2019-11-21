@@ -25,6 +25,23 @@ export default () => {
                             <Socials size="24px" />
                         </div>
                     </div>
+                    <div className="contact_title">Реквизиты</div>
+                    <div className="contact_adress">
+                        <div className="contact_left_text">
+                            <p>ОГРН:</p>
+                            <p>ИНН</p>
+                            <p>БИК:</p>
+                            <p>Р/с:</p>
+                            <p>К/с:</p>
+                        </div>
+                        <div className="contact_right_text">
+                            <p>1195000002922</p>
+                            <p>5038143310</p>
+                            <p>044525225 в ПАО Сбербанк России</p>
+                            <p>40701810240000000415</p>
+                            <p>30101810400000000225</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="contact_map">
