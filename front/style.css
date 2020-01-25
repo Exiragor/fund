@@ -2625,6 +2625,11 @@ a.button--main-slider {
     margin-top: 35px;
 }
 
+.button--red {
+    background-color: #d21b22;
+    color: #ffffff;
+}
+
 .text-left {
     text-align: left;
 }
@@ -2741,4 +2746,15 @@ footer {
 .page-contact {
     position: relative;
     padding: 0;
+}
+.ask-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.ask-bottom a {
+    min-width: 200px;
+}
+.ask-form input, .ask-form textarea {
+    border: 1px solid black;
 }

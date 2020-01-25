@@ -5,6 +5,7 @@ import {fileRouter, privateFileRouter} from './files';
 import {slidesRouter, privateSlidesRouter} from './slides';
 import {contentRouter, privateContentRouter} from './content';
 import {projectsRouter, privateProjectsRouter} from './projects';
+import {feedbackRouter, privateFeedbackRouter} from './feedback';
 import authRouter from './auth';
 import env from "dotenv";
 env.config();
@@ -19,6 +20,7 @@ privateRouter.use('/news', privateNewsRouter);
 privateRouter.use('/slides', privateSlidesRouter);
 privateRouter.use('/content', privateContentRouter);
 privateRouter.use('/projects', privateProjectsRouter);
+privateRouter.use('/feedback', privateFeedbackRouter);
 
 
 // common routes
@@ -29,6 +31,7 @@ router.use('/files', fileRouter);
 router.use('/slides', slidesRouter);
 router.use('/content', contentRouter);
 router.use('/projects', projectsRouter);
+router.use('/feedback', feedbackRouter);
 router.get('/', (req: Request, res: Response) => res.json({ status: 200, text: "Welcome to Api! It's working."}));
 
 
