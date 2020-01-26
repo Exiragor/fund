@@ -36,6 +36,6 @@ const Home = () => {
             <PartnersSlider />
         </div>
     );
-}
+};
 
 export default Home;

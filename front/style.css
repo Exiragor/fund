@@ -2758,3 +2758,6 @@ footer {
 .ask-form input, .ask-form textarea {
     border: 1px solid black;
 }
+.d-none {
+    display: none;
+}
