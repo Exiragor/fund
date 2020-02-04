@@ -1,19 +1,14 @@
 import Aside from '../../components/Navigation/Aside';
-import MiniSliderPortal from '../../components/Sliders/MiniSliderPortal';
 import {menu} from './menu';
 import { useEffect, useState } from 'react';
 import {getOne} from '../../api/content';
 
-const aboutFondPage = () => {
+const aboutReportsPage = () => {
     const [content, setContent] = useState('');
-    const [miniSliders, setMiniSliders] = useState([]);
-
-
 
     useEffect(() => {
-        getOne('about-fund').then(res => {
+        getOne('about-reports').then(res => {
             setContent(res.data);
-            setMiniSliders([...document.getElementsByClassName('js-mini-slider')]);
         });
     }, []);
 
@@ -21,10 +16,9 @@ const aboutFondPage = () => {
         <div className="wrapper">
             <h1 className="entry-title">{ content.name }</h1>
             <div className="entry-content with-sidebar" dangerouslySetInnerHTML={{ __html: content.value }} />
-            <Aside sections={menu} currentPage="О фонде" />
-            <MiniSliderPortal sliders={miniSliders} />
+            <Aside sections={menu} currentPage={content.name} />
         </div>
     )
 };
 
-export default aboutFondPage;
+export default aboutReportsPage;
