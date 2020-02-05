@@ -2,13 +2,16 @@ import Aside from '../../components/Navigation/Aside';
 import {menu} from './menu';
 import { useEffect, useState } from 'react';
 import {getOne} from '../../api/content';
+import {useBus} from "react-bus";
 
 const aboutReportsPage = () => {
     const [content, setContent] = useState('');
+    const bus = useBus();
 
     useEffect(() => {
         getOne('about-reports').then(res => {
             setContent(res.data);
+            bus.emit('mini-sliders:refresh');
         });
     }, []);
 

@@ -14,7 +14,7 @@ export default () => {
     return (
         <div className="content" style={{ minHeight: 'calc(100vh - 370px)'}}>
             <div className="wrapper">
-                <h3 className="entry-title">Услуги</h3>
+                <h3 className="entry-title">Программы</h3>
             </div>
             <Projects services={projects} />
         </div>

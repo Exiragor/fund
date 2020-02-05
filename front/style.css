@@ -2707,6 +2707,33 @@ section.partners-slider .slick-arrow:hover, section.partners-slider .slick-arrow
     background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
     box-shadow: 0 20px 30px rgba(127,142,165,0.5);
 }
+.mini-slider {
+    padding: 10px 35px;
+}
+
+.mini-slider img {
+    height: 150px;
+}
+
+.mini-slider .slick-prev {
+    left: -50px;
+}
+
+.mini-slider .slick-next {
+    right: -50px;
+}
+.mini-slider .slick-arrow {
+    width: 48px;
+    height: 48px;
+}
+.mini-slider .slick-arrow {
+    background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
+}
+
+.mini-slider .slick-arrow:hover, section.partners-slider .slick-arrow:focus {
+    background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
+    box-shadow: 0 20px 30px rgba(127,142,165,0.5);
+}
 
 .slick-prev {
     left: 10px;

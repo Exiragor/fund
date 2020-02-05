@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
 import ReactDOM from "react-dom";
+import MiniSlider from "./MiniSlider";
 
 const MiniSliderPortal = ({ slider }) => {
     return ReactDOM.createPortal(
-        <Child number={slider.dataset.number}/>,
+        <MiniSlider prefix={slider.dataset.prefix}/>,
         slider
     );
 };
-
-const Child = ({number}) => <div>привет, это мини-слайдер: {number}</div>;
 
 export default ({sliders}) => {
     return (

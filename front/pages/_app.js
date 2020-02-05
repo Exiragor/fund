@@ -8,6 +8,8 @@ import "../style.css";
 import Head from 'next/head';
 import Header from '../components/Layout/Header';
 import Footer from '../components/Layout/Footer';
+import { Provider as BusProvider } from 'react-bus'
+
 
 class MyMobxApp extends App {
   static async getInitialProps(appContext) {
@@ -38,18 +40,20 @@ class MyMobxApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <Container>
-        <Provider store={this.mobxStore}>
-          <div className="canvas">
-            <Head>
-              <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-            </Head>
-            <Header />
-            <main>
-              <Component {...pageProps} />
-            </main>
-            <Footer />
-          </div>
-        </Provider>
+        <BusProvider>
+          <Provider store={this.mobxStore}>
+            <div className="canvas">
+              <Head>
+                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+              </Head>
+              <Header />
+              <main>
+                <Component {...pageProps} />
+              </main>
+              <Footer />
+            </div>
+          </Provider>
+        </BusProvider>
       </Container>
     )
   }

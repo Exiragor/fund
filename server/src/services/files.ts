@@ -2,11 +2,12 @@ import {getRepository, Repository} from 'typeorm';
 import { File } from '../models/File';
 import sharp from 'sharp';
 import * as fs from 'fs';
+import {News} from "../models/News";
 
 const getRep: () => Repository<File> = () => getRepository(File);
 
 export const saveFile = async (fileName: string, destination: string, fileType: string): Promise<number|null> => {
-    const file = new File(null, destination, fileType, true);
+    const file = new File(null, destination, fileType, fileName, '', true);
     await getRep().save(file);
 
     return file.id;
@@ -18,7 +19,21 @@ export const getFile = async (id: number): Promise<string> => {
         return file;
     }
     return `${file.filePath}/source.${file.fileType}`;
-}
+};
+
+export const getFiles = async (
+    prefix: string, page: number, count: number = 20
+): Promise<{items: File[], total: number}> => {
+    return {
+        items: await getRep().find({
+            take: count,
+            skip: page > 0 && --page * count || 0,
+            where: { isActive: true, prefix },
+            order: { id: "DESC" }
+        }),
+        total: await getRep().count({where: { isActive: true, prefix }})
+    }
+};
 
 export const getImgFile = async (id: number, params: { width: number, height: number } | undefined): Promise<string> => {
     const image = await getRep().findOneOrFail(id);
@@ -37,4 +52,4 @@ export const getImgFile = async (id: number, params: { width: number, height: nu
     }
 
     return filePathWithResize;
-}
+};

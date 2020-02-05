@@ -7,6 +7,13 @@ export const getSlider = async (sliderName: string) => {
     return await getRep().find({ where: { isActive: true, sliderName }, order: { order: 'ASC', id: 'DESC' }});
 };
 
+export const getSliderByPrefix = async (sliderName: string, prefix: string) => {
+    return await getRep().find({
+        where: { isActive: true, sliderName, prefix },
+        order: { order: 'ASC', id: 'DESC' }
+    });
+};
+
 export const addSlide = async (params: Slide): Promise<number|null> => {
     const slide = {...params};
     slide.isActive = true;

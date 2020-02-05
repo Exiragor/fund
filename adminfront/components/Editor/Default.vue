@@ -34,13 +34,15 @@
           plugins: [
             'advlist autolink lists link image charmap print preview anchor',
             'searchreplace visualblocks code fullscreen',
-            'insertdatetime media table paste code help wordcount example'
+            'insertdatetime media table paste code help wordcount slider'
           ],
           toolbar:
             'undo redo | image media link | formatselect | bold italic backcolor | \
             alignleft aligncenter alignright alignjustify | \
-            bullist numlist outdent indent | removeformat',
+            bullist numlist outdent indent | removeformat | \
+            slider',
           external_plugins: {
+            'slider': '/js/plugin-mini-slider.js',
             'example': '/js/plugin.js'
           },
           file_picker_types: 'file image media',

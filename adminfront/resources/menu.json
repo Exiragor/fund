@@ -5,5 +5,7 @@
   { "link": "/projects/project", "name": "Проекты", "icon": "s-shop" },
   { "link": "/projects/program", "name": "Программы", "icon": "s-shop" },
   { "link": "/slider/main", "name": "Слайдер на главной", "icon": "connection" },
-  { "link": "/content", "name": "Блоки контента", "icon": "s-shop" }
+  { "link": "/slider/mini", "name": "Мини-слайдеры", "icon": "connection" },
+  { "link": "/content", "name": "Блоки контента", "icon": "s-shop" },
+  { "link": "/documents", "name": "Документы", "icon": "document" }
 ]

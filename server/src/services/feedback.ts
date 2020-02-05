@@ -11,7 +11,7 @@ export const getAll = async (page: number, count: number = 20): Promise<{items: 
             where: { isActive: true },
             order: { id: "DESC" }
         }),
-        total: await getRep().count()
+        total: await getRep().count({where: { isActive: true }})
     }
 };
 

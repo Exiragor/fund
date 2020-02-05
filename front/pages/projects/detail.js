@@ -2,8 +2,10 @@ import Detail from '../../components/Catalog/Detail';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import {getOne} from '../../api/projects';
+import {useBus} from "react-bus";
 
 const ProjectDetail = () => {
+    const bus = useBus();
     const router = useRouter();
     const [project, setProject] = useState(null);
     const { id } = router.query;
@@ -11,6 +13,7 @@ const ProjectDetail = () => {
     useEffect(() => {
         getOne(id).then(res => {
             setProject(res.data);
+            bus.emit('mini-sliders:refresh');
         });
     }, []);
 

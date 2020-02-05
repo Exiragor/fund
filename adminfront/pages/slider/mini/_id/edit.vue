@@ -12,7 +12,7 @@
 
 <script>
   import {update} from '@/api/slides';
-  import SlidesFillCard from '@/components/Slides/FillCard';
+  import SlidesFillCard from '@/components/Slides/MSFillCard';
 
   export default {
     components: {
@@ -36,7 +36,7 @@
           type: 'success',
           message: 'Слайд успешно изменен'
         });
-        this.$router.push('/slider/main');
+        this.$router.push('/slider/mini');
       }
     }
   }

@@ -21,6 +21,7 @@
     "mobx-react": "^6.1.1",
     "next": "^8.1.0",
     "react": "^16.8.6",
+    "react-bus": "^2.0.1",
     "react-dom": "^16.8.6",
     "react-fontawesome": "^1.6.1",
     "react-slick": "^0.24.0",

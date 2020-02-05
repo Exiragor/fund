@@ -7,14 +7,14 @@
 </template>
 
 <script>
-  import SlidesList from '@/components/Slides/List';
+  import SlidesList from '@/components/Slides/MSList';
 
   export default {
     components: {
       SlidesList
     },
     mounted() {
-      this.$store.dispatch('slides/load', 'mini');
+      this.$store.dispatch('slides/load', 'mini-slider');
     }
   }
 </script>
