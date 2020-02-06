@@ -1,7 +1,7 @@
 <template>
   <el-row>
-    <h1>Слайды мини-слайдера</h1>
-    <n-link to="/slider/mini/add"><el-button type="success" class="mb-3">Добавить новый</el-button></n-link>
+    <h1>Слайды главного слайдера</h1>
+    <n-link to="/slider/main/add"><el-button type="success" class="mb-3">Добавить новый</el-button></n-link>
     <slides-list class="mb-3" />
     <el-pagination
       background
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-  import SlidesList from '@/components/Slides/MSList';
+  import SlidesList from '@/components/Slides/List';
 
   export default {
     components: {
@@ -26,15 +26,18 @@
     computed: {
       pagesTotal() {
         return this.$store.getters['slides/total'];
+      },
+      page() {
+        return +this.$route.params.id;
       }
     },
     methods: {
       handlePageChange(page) {
-        this.$router.push(`/slider/mini/${page}/page`);
+        this.$router.push(`/slider/main/${page}/page`);
       }
     },
     mounted() {
-      this.$store.dispatch('slides/load', {slider: 'mini-slider', count: this.count, page: 1});
+      this.$store.dispatch('slides/load', {slider: 'main', count: this.count, page: this.page || 1});
     }
   }
 </script>

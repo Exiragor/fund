@@ -1,13 +1,14 @@
 import { Router, Request, Response } from "express";
 import * as fileService from '../services/files';
 import { upload } from '../helpers/upload';
+import {File} from "../models/File";
 
 export const fileRouter: Router = Router();
 export const privateFileRouter: Router = Router();
 
 privateFileRouter.post('/' , upload.single('file'), async (req: Request, res: Response) => {
-    const id: number|null = await fileService.saveFile(req.file.originalname, req.file.destination, '' + req.file.mimetype.split('/').pop());
-    return res.send(`${id}`);
+    const file: File|null = await fileService.saveFile(req.file.originalname, req.file.destination, '' + req.file.mimetype.split('/').pop());
+    return res.json(file);
 });
 
 fileRouter.get('/:id', async (req: Request, res: Response) => {

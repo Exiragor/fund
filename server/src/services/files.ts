@@ -6,11 +6,11 @@ import {News} from "../models/News";
 
 const getRep: () => Repository<File> = () => getRepository(File);
 
-export const saveFile = async (fileName: string, destination: string, fileType: string): Promise<number|null> => {
+export const saveFile = async (fileName: string, destination: string, fileType: string): Promise<File|null> => {
     const file = new File(null, destination, fileType, fileName, '', true);
     await getRep().save(file);
 
-    return file.id;
+    return file;
 };
 
 export const getFile = async (id: number): Promise<string> => {

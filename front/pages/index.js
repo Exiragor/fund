@@ -14,7 +14,7 @@ const Home = () => {
 
     useEffect(() => {
         getAll('main').then(res => {
-            setMainSlides(res.data);
+            setMainSlides(res.data.items);
         });
         getOne('main-activities-block').then(res => {
             setActivitiesBlock(res.data);

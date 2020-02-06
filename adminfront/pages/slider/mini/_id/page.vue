@@ -26,6 +26,9 @@
     computed: {
       pagesTotal() {
         return this.$store.getters['slides/total'];
+      },
+      page() {
+        return +this.$route.params.id;
       }
     },
     methods: {
@@ -34,7 +37,7 @@
       }
     },
     mounted() {
-      this.$store.dispatch('slides/load', {slider: 'mini-slider', count: this.count, page: 1});
+      this.$store.dispatch('slides/load', {slider: 'mini-slider', count: this.count, page: this.page || 1});
     }
   }
 </script>

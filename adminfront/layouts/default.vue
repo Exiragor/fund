@@ -1,6 +1,6 @@
 <template>
   <el-container>
-      <el-aside>
+      <el-aside style="min-height: 100vh">
         <Menu />
       </el-aside>
     <el-container>

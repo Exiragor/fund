@@ -42,8 +42,7 @@
             bullist numlist outdent indent | removeformat | \
             slider',
           external_plugins: {
-            'slider': '/js/plugin-mini-slider.js',
-            'example': '/js/plugin.js'
+            'slider': '/js/plugin-mini-slider.js'
           },
           file_picker_types: 'file image media',
           images_upload_handler: (blobInfo, success, failure) => {
@@ -53,20 +52,33 @@
           },
           image_description: false,
           media_dimensions: false,
+          media_poster: false,
           file_picker_callback: (cb, value, meta) => {
             let input = document.createElement('input');
             let token = this.$auth.getToken('local');
             input.setAttribute('type', 'file');
-            input.setAttribute('accept', 'audio/* image/*');
+            // input.setAttribute('accept', 'audio/* image/*');
             input.onchange = function() {
               let file = this.files[0];
 
               uploadFile(token, file)
-                .then(res => cb(res.url))
+                .then(res => {
+                  console.log(value);
+                  const type = res.file.fileType;
+                  console.log(type);
+                  if (type === 'mpeg' || type === 'ogg' || type === 'wav') {
+                    cb(res.url)
+                  } else {
+                    cb(res.url, {text: res.file.name})
+                  }
+                })
                 .catch(err => cb(err))
             };
 
             input.click();
+          },
+          video_template_callback: function(data) {
+            return '<audio controls>' + '\n<source src="' + data.source1 + '"' + (data.source1mime ? ' type="' + data.source1mime + '"' : '') + ' />\n' + '</audio>';
           }
         },
         value: ''

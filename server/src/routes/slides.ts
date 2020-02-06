@@ -6,7 +6,7 @@ export const slidesRouter: Router = Router();
 export const privateSlidesRouter: Router = Router();
 
 slidesRouter.get("/:slider", async (req: Request, res: Response): Promise<Response> =>
-    res.json(await slidesService.getSlider(req.params.slider)));
+    res.json(await slidesService.getSlider(req.params.slider, req.query.page || 1, req.query.count || 20)));
 
 slidesRouter.get("/:slider/:prefix", async (req: Request, res: Response): Promise<Response> =>
     res.json(await slidesService.getSliderByPrefix(req.params.slider, req.params.prefix)));
