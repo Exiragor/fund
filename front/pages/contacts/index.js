@@ -4,7 +4,7 @@ import ContactForm from '../../components/Forms/ContactForm';
 export default () => {
     return (
         <div>
-            <div className="wrapper page-contact">
+            <div className="wrapper page-contact" style={{zIndex: 1}}>
                 <div className="contact-content contact-height">
                     <h1 className="entry-title">Контакты</h1>
                     <div className="entry-content">

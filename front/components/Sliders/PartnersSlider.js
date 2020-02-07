@@ -1,4 +1,6 @@
 import Slider from 'react-slick';
+import Link from 'next/link';
+import {getImgUrlById} from "../../helpers";
 
 const settings = {
     autoplay: true,
@@ -9,29 +11,25 @@ const settings = {
     pauseOnFocus: true
 };
 
-const PartnersSlider = () => {
+const getLinkBySlide = (slide) => {
+    return slide.url ?
+                <a href={slide.url} target="_blank">
+                    <img src={getImgUrlById(slide.photo)} alt={slide.title} />
+                </a>
+                :
+                <Link prefetch href={slide.link}>
+                    <a href="javascript:void(0)">
+                        <img src={getImgUrlById(slide.photo)} alt={slide.title} />
+                    </a>
+                </Link>
+};
+
+const PartnersSlider = ({slides}) => {
     return (
         <section className="content partners-slider">
             <div className="title">Партнеры фонда</div>
             <Slider {...settings}>
-                <a href="/">
-                    <img src="/static/logo.jpg" />
-                </a>
-                <a href="https://kosygin-rgu.ru/" target="_blank">
-                    <img src="/static/РГУ-02 на светлом.png" />
-                </a>
-                <a href="/">
-                    <img src="/static/conductor.jpg" />
-                </a>
-                <a href="/">
-                    <img src="/static/logo.jpg" />
-                </a>
-                <a href="https://kosygin-rgu.ru/" target="_blank">
-                    <img src="/static/РГУ-02 на светлом.png" />
-                </a>
-                <a href="/">
-                    <img src="/static/conductor.jpg" />
-                </a>
+                {slides && slides.map((slide => getLinkBySlide(slide)))}
             </Slider>
         </section>
     );

@@ -8,6 +8,7 @@ import {useEffect, useState} from "react";
 
 const Home = () => {
     const [mainSlides, setMainSlides] = useState([]);
+    const [partnersSlides, setPartnersSlides] = useState([]);
     const [activitiesBlock, setActivitiesBlock] = useState(null);
     const [programsBlock, setProgramsBlock] = useState(null);
     const [servicesBlock, setServicesBlock] = useState(null);
@@ -15,6 +16,9 @@ const Home = () => {
     useEffect(() => {
         getAll('main').then(res => {
             setMainSlides(res.data.items);
+        });
+        getAll('partners').then(res => {
+            setPartnersSlides(res.data.items);
         });
         getOne('main-activities-block').then(res => {
             setActivitiesBlock(res.data);
@@ -33,7 +37,7 @@ const Home = () => {
             <div className="float-clear" />
             <Services activities={activitiesBlock} programs={programsBlock} services={servicesBlock} />
             <HelpInfo />
-            <PartnersSlider />
+            <PartnersSlider slides={partnersSlides} />
         </div>
     );
 };
