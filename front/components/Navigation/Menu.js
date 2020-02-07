@@ -7,13 +7,13 @@ const menu = [
         children: [
             { name: 'О фонде', link: '/about/fond'},
             { name: 'Как помочь', link: '/about/help'},
-            { name: 'Партнеры', link: '/other'},
-            { name: 'Достижения', link: '/other'},
-            { name: 'Отчеты', link: '/other'},
+            { name: 'Партнеры', link: '/about/partners'},
+            { name: 'Достижения', link: '/about/results'},
+            { name: 'Отчеты', link: '/about/reports'},
         ]
     },
-    { name: 'Маэстро', link: '/other', children: []},
-    { name: 'Программы', link: '/other', children: []},
+    { name: 'Маэстро', link: '/maestro', children: []},
+    { name: 'Программы', link: '/programs', children: []},
     { name: 'Услуги', link: '/services', children: []},
     { name: 'Проекты', link: '/projects', children: []},
     { name: 'Новости', link: '/news', children: []},

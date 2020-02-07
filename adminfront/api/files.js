@@ -11,5 +11,5 @@ export const uploadFile = async (token, file) => {
   });
   const host = gethost();
 
-  return { url: host + `/files/${data}`, id: data };
-}
+  return { url: host + `/files/${data.id}`, id: data.id, file: data };
+};

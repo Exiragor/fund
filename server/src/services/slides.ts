@@ -3,8 +3,23 @@ import { Slide } from '../models/Slide';
 
 const getRep: () => Repository<Slide> = () => getRepository(Slide);
 
-export const getSlider = async (sliderName: string) => {
-    return await getRep().find({ where: { isActive: true, sliderName }, order: { order: 'ASC', id: 'DESC' }});
+export const getSlider = async (sliderName: string, page: number, count: number = 20) => {
+    return {
+        items: await getRep().find({
+            take: count,
+            skip: page > 0 && --page * count || 0,
+            where: { isActive: true, sliderName },
+            order: { order: 'ASC', id: 'DESC' }
+        }),
+        total: await getRep().count({where: { isActive: true, sliderName }})
+    };
+};
+
+export const getSliderByPrefix = async (sliderName: string, prefix: string) => {
+    return await getRep().find({
+        where: { isActive: true, sliderName, prefix },
+        order: { order: 'ASC', id: 'DESC' }
+    });
 };
 
 export const addSlide = async (params: Slide): Promise<number|null> => {

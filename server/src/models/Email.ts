@@ -1,7 +1,7 @@
 import {Entity, Column, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
-export class Emails {
+export class Email {
 
     constructor(id: number, value: string, isActive: boolean) {
         this.id = id;

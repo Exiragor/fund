@@ -12,6 +12,7 @@ export class Slide {
         text: string,
         order: number,
         photo: string,
+        prefix: string,
         isActive: boolean
     ) {
         this.id = id;
@@ -22,6 +23,7 @@ export class Slide {
         this.text = text;
         this.order = order;
         this.photo = photo;
+        this.prefix = prefix;
         this.isActive = isActive;
     }
 
@@ -48,6 +50,9 @@ export class Slide {
 
     @Column({nullable: true})
     photo: string;
+
+    @Column({nullable: true})
+    prefix: string;
 
     @Column()
     isActive: boolean;

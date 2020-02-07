@@ -6,8 +6,8 @@ export const create = async ({ slide, token }) => {
   return await authReq(token).post(mainUrl, slide);
 };
 
-export const getAll = async (slider) => {
-  return await request.get(mainUrl + `/${slider}`);
+export const getAll = async (slider, page, count) => {
+  return await request.get(mainUrl + `/${slider}`, {params: { page, count }});
 };
 
 export const getOne = async (id) => {

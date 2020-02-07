@@ -128,7 +128,7 @@ header {
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.247058823529412);
     -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.247058823529412);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.247058823529412);
-    z-index: 10;
+    z-index: 5;
 }
 .header_content {
     height: 140px;
@@ -2625,6 +2625,11 @@ a.button--main-slider {
     margin-top: 35px;
 }
 
+.button--red {
+    background-color: #d21b22;
+    color: #ffffff;
+}
+
 .text-left {
     text-align: left;
 }
@@ -2702,6 +2707,33 @@ section.partners-slider .slick-arrow:hover, section.partners-slider .slick-arrow
     background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
     box-shadow: 0 20px 30px rgba(127,142,165,0.5);
 }
+.mini-slider {
+    padding: 10px 35px;
+}
+
+.mini-slider img {
+    height: 150px;
+}
+
+.mini-slider .slick-prev {
+    left: -50px;
+}
+
+.mini-slider .slick-next {
+    right: -50px;
+}
+.mini-slider .slick-arrow {
+    width: 48px;
+    height: 48px;
+}
+.mini-slider .slick-arrow {
+    background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
+}
+
+.mini-slider .slick-arrow:hover, section.partners-slider .slick-arrow:focus {
+    background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
+    box-shadow: 0 20px 30px rgba(127,142,165,0.5);
+}
 
 .slick-prev {
     left: 10px;
@@ -2741,4 +2773,35 @@ footer {
 .page-contact {
     position: relative;
     padding: 0;
+}
+.ask-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.ask-bottom a {
+    min-width: 200px;
+}
+.ask-form input, .ask-form textarea {
+    border: 1px solid black;
+}
+.d-none {
+    display: none;
+}
+a.file {
+    height: 35px;
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
+a.file:before {
+    content: '';
+    background-image: url("/static/file.png");
+    background-size: cover;
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: -5px;
 }

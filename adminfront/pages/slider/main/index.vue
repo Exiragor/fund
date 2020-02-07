@@ -3,6 +3,13 @@
     <h1>Слайды главного слайдера</h1>
     <n-link to="/slider/main/add"><el-button type="success" class="mb-3">Добавить новый</el-button></n-link>
     <slides-list class="mb-3" />
+    <el-pagination
+      background
+      layout="prev, pager, next"
+      :page-size="count"
+      @current-change="handlePageChange"
+      :total="pagesTotal">
+    </el-pagination>
   </el-row>
 </template>
 
@@ -13,8 +20,21 @@
     components: {
       SlidesList
     },
+    data: () => ({
+      count: 10
+    }),
+    computed: {
+      pagesTotal() {
+        return this.$store.getters['slides/total'];
+      }
+    },
+    methods: {
+      handlePageChange(page) {
+        this.$router.push(`/slider/main/${page}/page`);
+      }
+    },
     mounted() {
-      this.$store.dispatch('slides/load', 'main');
+      this.$store.dispatch('slides/load', {slider: 'main',count: this.count, page: 1});
     }
   }
 </script>
