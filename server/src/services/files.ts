@@ -13,12 +13,12 @@ export const saveFile = async (fileName: string, destination: string, fileType: 
     return file;
 };
 
-export const getFile = async (id: number): Promise<string> => {
+export const getFile = async (id: number): Promise<{path: string, file: File}> => {
     const file = await getRep().findOneOrFail(id);
     if (!file) {
         return file;
     }
-    return `${file.filePath}/source.${file.fileType}`;
+    return { path:`${file.filePath}/source.${file.fileType}`, file };
 };
 
 export const getFiles = async (

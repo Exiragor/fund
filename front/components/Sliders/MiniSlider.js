@@ -33,7 +33,7 @@ const MiniSlider = ({prefix}) => {
     return (
         <div class="mini-slider">
             {slides.length && <Slider {...settings}>
-                {slides.map(slide => <a href="javascript:void(0)" className="text-center">
+                {slides.map(slide => <a href="javascript:void(0)" className="text-center" key={slide.id}>
                     <img style={{display: 'inline'}} src={getImgUrlById(slide.photo)} alt="" onClick={handleClick.bind({slide})} />
                 </a>)}
             </Slider>}

@@ -79,7 +79,11 @@
           },
           video_template_callback: function(data) {
             return '<audio controls>' + '\n<source src="' + data.source1 + '"' + (data.source1mime ? ' type="' + data.source1mime + '"' : '') + ' />\n' + '</audio>';
-          }
+          },
+          link_class_list: [
+            {title: 'None', value: ''},
+            {title: 'File', value: 'file'}
+          ]
         },
         value: ''
       }

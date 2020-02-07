@@ -13,11 +13,11 @@ const settings = {
 
 const getLinkBySlide = (slide) => {
     return slide.url ?
-                <a href={slide.url} target="_blank">
+                <a href={slide.url} target="_blank" key={slide.id}>
                     <img src={getImgUrlById(slide.photo)} alt={slide.title} />
                 </a>
                 :
-                <Link prefetch href={slide.link}>
+                <Link prefetch href={slide.link} key={slide.id}>
                     <a href="javascript:void(0)">
                         <img src={getImgUrlById(slide.photo)} alt={slide.title} />
                     </a>

@@ -2788,3 +2788,20 @@ footer {
 .d-none {
     display: none;
 }
+a.file {
+    height: 35px;
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
+a.file:before {
+    content: '';
+    background-image: url("/static/file.png");
+    background-size: cover;
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: -5px;
+}

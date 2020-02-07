@@ -12,8 +12,8 @@ privateFileRouter.post('/' , upload.single('file'), async (req: Request, res: Re
 });
 
 fileRouter.get('/:id', async (req: Request, res: Response) => {
-    const filePath: string = await fileService.getFile(req.params.id);
-    return res.sendFile(filePath);
+    const fileItem = await fileService.getFile(req.params.id);
+    return res.download(fileItem.path, fileItem.file.name);
 });
 
 fileRouter.get('/:id/:width/:height', async (req: Request, res: Response) => {
