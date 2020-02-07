@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Редактирование слайда</h1>
-    <SlidesFillCard :item="currentSlide" />
+    <SlidesFillCard :item="currentSlide" slider-name="partners" />
     <el-row>
       <el-col :offset="9" :span="5">
         <el-button type="success" @click="updateSlide">Изменить слайд</el-button>

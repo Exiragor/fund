@@ -50,7 +50,7 @@
     methods: {
       handleEdit(item) {
         this.$store.dispatch('slides/updateCurrent', { item });
-        this.$router.push(`/slider/main/${item.id}/edit`);
+        this.$router.push(`/slider/${item.sliderName}/${item.id}/edit`);
       },
       handleDelete(index, item) {
         this.$confirm('Это действие удалит слайд навсегда. Продолжить?', 'Предупреждение', {
