@@ -11,14 +11,14 @@ export default () => {
                         <div className="contact_title">Благотворительный Фонд «Наша Песня»</div>
                         <div className="contact_adress">
                             <div className="contact_left_text">
-                                <p>Телефон:</p>
-                                <p>E-mail:</p>
-                                <p>Адрес:</p>
+                                <p className="mb-5">Телефон:</p>
+                                <p className="mb-5">E-mail:</p>
+                                <p className="mb-5">Адрес:</p>
                             </div>
                             <div className="contact_right_text">
-                                <p><a href="tel:+74997559551">+7 (499) 755-95-51</a></p>
-                                <p><a href="mailto:nashapesnya@list.ru">nashapesnya@list.ru</a></p>
-                                <p>Москва ул.Садовническая дом 33, стр1, офис 506</p>
+                                <p className="mb-5"><a href="tel:+74997559551">+7 (499) 755-95-51</a></p>
+                                <p className="mb-5"><a href="mailto:nashapesnya@list.ru">nashapesnya@list.ru</a></p>
+                                <p className="mb-5">Москва ул.Садовническая дом 33, стр1, офис 506</p>
                             </div>
                         </div>
                         <div className="contact_social">
@@ -30,18 +30,18 @@ export default () => {
                         <div className="contact_title">Реквизиты</div>
                         <div className="contact_adress">
                             <div className="contact_left_text">
-                                <p>ОГРН:</p>
-                                <p>ИНН</p>
-                                <p>БИК:</p>
-                                <p>Р/с:</p>
-                                <p>К/с:</p>
+                                <p className="mb-5">ОГРН:</p>
+                                <p className="mb-5">ИНН</p>
+                                <p className="mb-5">БИК:</p>
+                                <p className="mb-5">Р/с:</p>
+                                <p className="mb-5">К/с:</p>
                             </div>
                             <div className="contact_right_text">
-                                <p>1195000002922</p>
-                                <p>5038143310</p>
-                                <p>044525225 в ПАО Сбербанк России</p>
-                                <p>40701810240000000415</p>
-                                <p>30101810400000000225</p>
+                                <p className="mb-5">1195000002922</p>
+                                <p className="mb-5">5038143310</p>
+                                <p className="mb-5">044525225 в ПАО Сбербанк России</p>
+                                <p className="mb-5">40701810240000000415</p>
+                                <p className="mb-5">30101810400000000225</p>
                             </div>
                         </div>
                     </div>
