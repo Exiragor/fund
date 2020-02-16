@@ -63,11 +63,8 @@
 
               uploadFile(token, file)
                 .then(res => {
-                  console.log(value);
-                  const type = res.file.fileType;
-                  console.log(type);
-                  if (type === 'mpeg' || type === 'ogg' || type === 'wav') {
-                    cb(res.url)
+                  if (meta.filetype === 'file') {
+                    cb(res.url + `/${res.file.name}`, {text: res.file.name})
                   } else {
                     cb(res.url, {text: res.file.name})
                   }

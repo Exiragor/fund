@@ -7,7 +7,7 @@ const menu = [
         children: [
             { name: 'О фонде', link: '/about/fond'},
             { name: 'Как помочь', link: '/about/help'},
-            { name: 'Партнеры', link: '/about/partners'},
+            { name: 'Команда', link: '/about/partners'},
             { name: 'Достижения', link: '/about/results'},
             { name: 'Отчеты', link: '/about/reports'},
         ]
