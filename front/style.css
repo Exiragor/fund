@@ -2796,19 +2796,20 @@ footer {
     display: none;
 }
 a.file {
-    height: 35px;
     display: block;
     position: relative;
-    padding-left: 40px;
+    padding-left: 20px;
     margin-bottom: 10px;
+    font-weight: 400 !important;
 }
 a.file:before {
     content: '';
-    background-image: url("/static/file.png");
+    background-image: url("/static/document.svg");
     background-size: cover;
     display: block;
-    width: 35px;
-    height: 35px;
+    width: 17px;
+    height: 17px;
     position: absolute;
-    left: -5px;
+    left: 0px;
+    color: red;
 }
