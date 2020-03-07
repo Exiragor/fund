@@ -19,7 +19,7 @@
     "element-ui": "^2.4.11",
     "express": "^4.16.4",
     "nuxt": "^2.0.0",
-    "tinymce": "^5.1.1"
+    "tinymce": "^5.1.4"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
