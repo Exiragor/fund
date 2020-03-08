@@ -6,7 +6,7 @@ import 'mediaelement';
 // Import stylesheet and shims
 import 'mediaelement/build/mediaelementplayer.min.css';
 import './MediaPlayer.css';
-import 'mediaelement/build/mediaelement-flash-video.swf';
+// import 'mediaelement/build/mediaelement-flash-video.swf';
 
 export default class MediaElement extends Component {
 
