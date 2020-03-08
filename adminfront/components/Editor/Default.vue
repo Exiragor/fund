@@ -75,7 +75,7 @@
             input.click();
           },
           video_template_callback: function(data) {
-            return '<audio controls>' + '\n<source src="' + data.source1 + '"' + (data.source1mime ? ' type="' + data.source1mime + '"' : '') + ' />\n' + '</audio>';
+            return `<div class="js-media-audio" data-url="${data.source1}"><div class="d-none">Здесь будет добавлено аудио</div></div>`;
           },
           link_class_list: [
             {title: 'None', value: ''},

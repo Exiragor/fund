@@ -1,0 +1,7 @@
+.mejs__button > button {
+    background-image: url('/static/mejs-controls.svg');
+}
+
+.mejs__controls:not([style*="display: none"]) {
+    background: #d21b22;
+}

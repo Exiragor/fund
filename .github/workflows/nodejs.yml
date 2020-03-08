@@ -1,0 +1,37 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: 
+      - production
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: cd adminfront
+    - run: npm install
+    - run: npm run build --if-present
+    - run: cd ../server
+    - run: npm install
+    - run: npm run build --if-present
+    - run: npm run migrate --if-present
+    - run: cd ../front
+    - run: npm install
+    - run: npm run build --if-present 
+    - run: pm2 restart app-fund-server
+    - run: pm2 restart app-fund-adminfront
+    - run: pm2 restart app-fund-front
+      env:
+        CI: true

@@ -1,4 +1,4 @@
-import {getAll, getOne, del} from '@/api/feedback';
+import {getAll, getOne, del} from '@/api/email';
 
 export const state = () => ({
   list: [],
@@ -13,6 +13,7 @@ export const state = () => ({
 export const actions = {
   async load({commit}, { page, count, token }) {
     const { data } = await getAll({ page, count, token });
+    console.log(data);
     commit('setList', data.items);
     commit('setTotalCount', data.total);
   },

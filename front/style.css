@@ -1000,6 +1000,12 @@ nav ul {
     font-size: 16px;
     text-align: center;
 }
+
+.submit_send--email {
+    float: none;
+    padding: 12px 25px;
+    margin-top: 25px;
+}
 /* Footer */
 
 footer {
@@ -1264,6 +1270,16 @@ a.social-icon {
     color: red;
     z-index: 999;
 }
+
+.email-err {
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    /*font: normal 12px Arial, sans-serif;*/
+    font: normal 12px PT Sans Regular, Arial;
+    color: red;
+    z-index: 999;
+}
 .errors_area {
     bottom: -20px;
 }
@@ -1310,10 +1326,10 @@ a .entry-title:hover {
 .entry-content p a:not(.social-icon) {
     font-weight: 700;
 }
-.entry-content > p > img {
-    width: 100%;
-    height: auto;
-}
+/*.entry-content > p > img {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*}*/
 #mysend {
     display: none;
 }

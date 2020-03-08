@@ -14,6 +14,7 @@ const ProjectDetail = () => {
         getOne(id).then(res => {
             setProject(res.data);
             bus.emit('mini-sliders:refresh');
+            bus.emit('audios:refresh');
         });
     }, []);
 
