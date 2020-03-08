@@ -4,6 +4,7 @@ import MiniSliderPortal from "../Sliders/MiniSliderPortal";
 import EmailForm from "../Forms/EmailForm";
 import {useListener} from 'react-bus';
 import dynamic from 'next/dynamic'
+import contacts from "../../dictionaries/contacts";
 
 const DynamicComponentWithNoSSR = dynamic(
     () => import('../Media/MediaPortal'),
@@ -28,11 +29,11 @@ const Footer = () => {
                 <p className="text text-left">
                     <span>© Благотворительный Фонд «Наша песня»</span><br />
                     <span>Реквизиты Благотворительного Фонда «Наша Песня»</span><br />
-                    <span>ОГРН: 1195000002922</span><br />
-                    <span>ИНН: 5038143310</span><br />
-                    <span>БИК 044525225</span> <span>в ПАО Сбербанк России</span><br />
-                    <span>Р/с 40701810240000000415</span><br />
-                    <span>К/с 30101810400000000225</span>
+                    <span>ОГРН: {contacts.ogrn}</span><br />
+                    <span>ИНН: {contacts.inn}</span><br />
+                    <span>БИК {contacts.bik}</span><br />
+                    <span>Р/с {contacts.rc}</span><br />
+                    <span>К/с {contacts.kc}</span>
                 </p>
                 <p className="text-left">
                     <span>

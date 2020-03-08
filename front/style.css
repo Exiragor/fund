@@ -1326,10 +1326,10 @@ a .entry-title:hover {
 .entry-content p a:not(.social-icon) {
     font-weight: 700;
 }
-.entry-content > p > img {
-    width: 100%;
-    height: auto;
-}
+/*.entry-content > p > img {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*}*/
 #mysend {
     display: none;
 }

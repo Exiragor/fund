@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Menu from '../Navigation/Menu';
+import contacts from "../../dictionaries/contacts";
 
 
 const Header = () => <header>
@@ -19,8 +20,8 @@ const Header = () => <header>
             </div>
             <div className="widget">
                 <div>
-                    <p><span><a href="tel:+74997559551">+7 (499) 755-95-51</a></span></p>
-                    <p><span><a href="mailto:nashapesnya@list.ru">nashapesnya@list.ru</a></span></p>
+                    <p><span><a href={`tel:${contacts.phoneNative}`}>{contacts.phone}</a></span></p>
+                    <p><span><a href={`mailto:${contacts.email}`}>{contacts.email}</a></span></p>
                 </div>
             </div>
             <div className="widget">
