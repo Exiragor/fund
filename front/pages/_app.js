@@ -44,6 +44,7 @@ class MyMobxApp extends App {
           <Provider store={this.mobxStore}>
             <div className="canvas">
               <Head>
+                <title>Наша песня</title>
                 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
               </Head>
               <Header />

@@ -31,7 +31,7 @@ const MiniSlider = ({prefix}) => {
     const handleClose = () => setShowingModal(false);
 
     return (
-        <div class="mini-slider">
+        <div className="mini-slider">
             {slides.length && <Slider {...settings}>
                 {slides.map(slide => <a href="javascript:void(0)" className="text-center" key={slide.id}>
                     <img style={{display: 'inline'}} src={getImgUrlById(slide.photo)} alt="" onClick={handleClick.bind({slide})} />

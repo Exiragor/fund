@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Menu from '../Navigation/Menu';
+import { YMInitializer } from 'react-yandex-metrika';
 import contacts from "../../dictionaries/contacts";
 
 
 const Header = () => <header>
+    <YMInitializer accounts={[38978210]} />
     <div className="header" data-label="шапка">
         <div className="header_content">
             <div className="widget">

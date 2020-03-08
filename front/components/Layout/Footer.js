@@ -1,10 +1,13 @@
 import Socials from '../Socials/List';
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import MiniSliderPortal from "../Sliders/MiniSliderPortal";
 import EmailForm from "../Forms/EmailForm";
 import {useListener} from 'react-bus';
 import dynamic from 'next/dynamic'
 import contacts from "../../dictionaries/contacts";
+import Router from 'next/router'
+import ym from 'react-yandex-metrika';
+
 
 const DynamicComponentWithNoSSR = dynamic(
     () => import('../Media/MediaPortal'),
@@ -22,6 +25,17 @@ const Footer = () => {
     useListener('audios:refresh', function () {
         setAudios([...document.getElementsByClassName('js-media-audio')]);
     });
+
+    const routeChangeCompleteHandler = (url) => {
+        ym('hit', url);
+    };
+
+    useEffect(() => {
+        Router.events.on('routeChangeComplete', routeChangeCompleteHandler);
+        return () => {
+            Router.events.off('routeChangeStart', routeChangeCompleteHandler);
+        }
+    }, [])
 
     return (
         <footer>
