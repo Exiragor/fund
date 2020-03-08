@@ -9,45 +9,46 @@ const emailSchema = Yup.object().shape({
         .required('Обязательное поле')
 });
 
-const emailInput = {
-    type: 'text',
-    name: 'email',
-    placeholder: 'Ваш email',
-    className: '',
-    errorClass: 'email-err'
-};
-
 const EmailForm = () => {
-    const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
+    const [emailSubmitted, setEmailSubmitted] = useState(false);
+
+    const inputs = [{
+        type: 'text',
+        name: 'email',
+        placeholder: 'Ваш email',
+        className: 'test',
+        errorClass: 'email-err'
+    }];
 
     return (
         <div>
-            {feedbackSubmitted && <div className="contact_message">Вы успешно подписаны на наши новости!</div>}
-            {!feedbackSubmitted && <Formik
+            {emailSubmitted && <div className="contact_message">Вы успешно подписаны на наши новости!</div>}
+            {!emailSubmitted && <Formik
                 initialValues={{email: ''}}
                 validationSchema={emailSchema}
                 onSubmit={async (values, { setSubmitting }) => {
-                    let res = await create({ value: values.email });
+                    let res = await create({ ...values });
                     if (res.data) {
-                        setFeedbackSubmitted(true);
+                        setEmailSubmitted(true);
                     }
                     setSubmitting(false);
                 }}
             >
                 {({ isSubmitting }) => (
                     <Form>
-                        <div style={{position: 'relative'}}>
-                            <Field
-                                as={emailInput.field}
-                                type={emailInput.type}
-                                name={emailInput.name}
-                                placeholder={emailInput.placeholder}
-                                className={emailInput.className} />
-                            <ErrorMessage
-                                name={emailInput.name}
-                                component="div"
-                                className={emailInput.errorClass} />
-                        </div>
+                        {inputs.map(input =>
+                            <div style={{position: 'relative'}} key={input.name}>
+                                <Field
+                                    type={input.type}
+                                    name={input.name}
+                                    placeholder={input.placeholder}
+                                    className={input.className} />
+                                <ErrorMessage
+                                    name={input.name}
+                                    component="div"
+                                    className={input.errorClass} />
+                            </div>
+                        )}
 
                         <button type="submit" disabled={isSubmitting} className="submit_send submit_send--email button--red">
                             Подписаться

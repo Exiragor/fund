@@ -14,6 +14,11 @@ const DynamicComponentWithNoSSR = dynamic(
     { ssr: false }
 );
 
+const DynamicEmailComponent = dynamic(
+    () => import('../Forms/EmailForm'),
+    { ssr: false }
+);
+
 const Footer = () => {
     const [miniSliders, setMiniSliders] = useState([]);
     const [audios, setAudios] = useState([]);
@@ -35,7 +40,7 @@ const Footer = () => {
         return () => {
             Router.events.off('routeChangeStart', routeChangeCompleteHandler);
         }
-    }, [])
+    }, []);
 
     return (
         <footer>
@@ -60,7 +65,7 @@ const Footer = () => {
             <div className="footer widget">
                 <h5>БУДЬ В КУРСЕ НОВОСТЕЙ</h5>
                 <div>
-                    <EmailForm />
+                    <DynamicEmailComponent />
                 </div>
             </div>
             <div className="footer widget">
