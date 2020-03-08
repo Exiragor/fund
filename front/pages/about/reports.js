@@ -12,6 +12,7 @@ const aboutReportsPage = () => {
         getOne('about-reports').then(res => {
             setContent(res.data);
             bus.emit('mini-sliders:refresh');
+            bus.emit('audios:refresh');
         });
     }, []);
 

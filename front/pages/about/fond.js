@@ -13,6 +13,7 @@ const aboutFondPage = () => {
         getOne('about-fund').then(res => {
             setContent(res.data);
             bus.emit('mini-sliders:refresh');
+            bus.emit('audios:refresh');
         });
     }, []);
 

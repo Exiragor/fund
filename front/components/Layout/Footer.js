@@ -3,12 +3,23 @@ import {useState} from "react";
 import MiniSliderPortal from "../Sliders/MiniSliderPortal";
 import EmailForm from "../Forms/EmailForm";
 import {useListener} from 'react-bus';
+import dynamic from 'next/dynamic'
+
+const DynamicComponentWithNoSSR = dynamic(
+    () => import('../Media/MediaPortal'),
+    { ssr: false }
+);
 
 const Footer = () => {
     const [miniSliders, setMiniSliders] = useState([]);
+    const [audios, setAudios] = useState([]);
 
     useListener('mini-sliders:refresh', function () {
         setMiniSliders([...document.getElementsByClassName('js-mini-slider')]);
+    });
+
+    useListener('audios:refresh', function () {
+        setAudios([...document.getElementsByClassName('js-media-audio')]);
     });
 
     return (
@@ -42,6 +53,8 @@ const Footer = () => {
                 <Socials size="20px" />
             </div>
             <MiniSliderPortal sliders={miniSliders} />
+
+            <DynamicComponentWithNoSSR audios={audios} />
         </footer>
     );
 };
