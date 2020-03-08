@@ -10,7 +10,7 @@ export class Email {
     }
 
     @PrimaryGeneratedColumn()
-    id: number;
+    id: number|null;
 
     @Column()
     value: string;

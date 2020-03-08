@@ -1,6 +1,6 @@
 <template>
   <el-row>
-    <h1>Обращения из формы обратной связи</h1>
+    <h1>Emails, которые подписаны на новости.</h1>
     <list class="mb-3" />
     <el-pagination
       background
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import List from '@/components/Feedback/List';
+  import List from '@/components/Email/List';
 
   export default {
     components: {
@@ -24,7 +24,7 @@
     }),
     computed: {
       pagesTotal() {
-        return this.$store.getters['feedback/total'];
+        return this.$store.getters['email/total'];
       },
       page() {
         return +this.$route.params.id;
@@ -32,12 +32,12 @@
     },
     methods: {
       handlePageChange(page) {
-        this.$router.push(`/feedback/${page}/page`);
+        this.$router.push(`/email/${page}/page`);
       }
     },
     mounted() {
       const token = this.$auth.getToken('local');
-      this.$store.dispatch('feedback/load', { page: this.page || 1, count: this.count, token });
+      this.$store.dispatch('email/load', { page: this.page || 1, count: this.count, token });
     }
   }
 </script>

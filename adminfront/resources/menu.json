@@ -5,6 +5,7 @@
   { "link": "/projects/project", "name": "Проекты", "icon": "s-shop" },
   { "link": "/projects/program", "name": "Программы", "icon": "s-shop" },
   { "link": "/feedback", "name": "Обратная связь из формы", "icon": "phone" },
+  { "link": "/email", "name": "Emails, подписанные на новости", "icon": "document-checked" },
   { "link": "/slider/main", "name": "Слайдер на главной", "icon": "connection" },
   { "link": "/slider/partners", "name": "Слайдер партнеров", "icon": "connection" },
   { "link": "/slider/mini", "name": "Мини-слайдеры", "icon": "connection" },

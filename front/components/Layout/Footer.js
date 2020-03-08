@@ -1,6 +1,7 @@
 import Socials from '../Socials/List';
 import {useState} from "react";
 import MiniSliderPortal from "../Sliders/MiniSliderPortal";
+import EmailForm from "../Forms/EmailForm";
 import {useListener} from 'react-bus';
 
 const Footer = () => {
@@ -22,12 +23,20 @@ const Footer = () => {
                     <span>Р/с 40701810240000000415</span><br />
                     <span>К/с 30101810400000000225</span>
                 </p>
-                {/*<p className="text-left"><span><a href="/" className="grey_link" target="_blank">Политика обработки персональных данных</a></span></p>*/}
+                <p className="text-left">
+                    <span>
+                        <a href="/static/docs/download.docx" style={{fontWeight: 'bold'}} target="_blank">
+                            Политика обработки персональных данных
+                        </a>
+                    </span>
+                </p>
             </div>
-            {/*<div className="footer widget">*/}
-            {/*<h5>БУДЬ В КУРСЕ НОВОСТЕЙ</h5>*/}
-            {/*<input type="email" name="your-email" size="40" placeholder="Ваш email" />*/}
-            {/*</div>*/}
+            <div className="footer widget">
+                <h5>БУДЬ В КУРСЕ НОВОСТЕЙ</h5>
+                <div>
+                    <EmailForm />
+                </div>
+            </div>
             <div className="footer widget">
                 <h5>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h5>
                 <Socials size="20px" />

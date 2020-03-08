@@ -10,31 +10,10 @@
       </template>
     </el-table-column>
     <el-table-column
-      label="Имя"
-      width="250">
-      <template slot-scope="scope">
-        <span>{{ scope.row.name }}</span>
-      </template>
-    </el-table-column>
-    <el-table-column
-      label="Телефон"
-      width="150">
-      <template slot-scope="scope">
-        <span>{{ scope.row.phone }}</span>
-      </template>
-    </el-table-column>
-    <el-table-column
       label="Email"
-      width="150">
+      width="650">
       <template slot-scope="scope">
-        <span>{{ scope.row.email }}</span>
-      </template>
-    </el-table-column>
-    <el-table-column
-      label="Текст"
-      width="600">
-      <template slot-scope="scope">
-        <span>{{ scope.row.text }}</span>
+        <span>{{ scope.row.value }}</span>
       </template>
     </el-table-column>
     <el-table-column
@@ -53,22 +32,22 @@
   export default {
     computed: {
       tableData() {
-        return this.$store.getters['feedback/list'];
+        return this.$store.getters['email/list'];
       }
     },
     methods: {
       handleDelete(index, item) {
-        this.$confirm('Это действие удалит обращение навсегда. Продолжить?', 'Предупреждение', {
+        this.$confirm('Это действие удалит почту навсегда. Продолжить?', 'Предупреждение', {
           confirmButtonText: 'Да',
           cancelButtonText: 'Отменить',
           type: 'warning'
         }).then(() => {
           const { id } = item;
           const token = this.$auth.getToken('local');
-          this.$store.dispatch('feedback/del', {id, token, index});
+          this.$store.dispatch('email/del', {id, token, index});
           this.$message({
             type: 'success',
-            message: 'Обращение успешно удалено'
+            message: 'Email успешно удален'
           });
         }).catch(() => {});
       }
