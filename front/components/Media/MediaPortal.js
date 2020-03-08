@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import ReactDOM from "react-dom";
-import MediaPlayer from "./Mediaplayer";
+import MediaPlayer from "./MediaPlayer";
 
 const MediaPortal = ({ media }) => {
     const
