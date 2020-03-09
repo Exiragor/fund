@@ -8,7 +8,11 @@ import "../style.css";
 import Head from 'next/head';
 import Header from '../components/Layout/Header';
 import Footer from '../components/Layout/Footer';
-import { Provider as BusProvider } from 'react-bus'
+import { Provider as BusProvider } from 'react-bus';
+
+const favSizes = [
+    24, 32, 48, 64, 96, 128, 256, 512
+];
 
 
 class MyMobxApp extends App {
@@ -46,6 +50,13 @@ class MyMobxApp extends App {
               <Head>
                 <title>Наша песня</title>
                 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+                <link rel="shortcut icon" href="/static/favicon/favicon-16x16.ico" />
+                {favSizes.map(size =>
+                    <link key={size} rel="icon"
+                          sizes={`${size}x${size}`}
+                          href={`/static/favicon/favicon-${size}x${size}.ico`} />
+                )}
+                <link rel="icon" sizes="48x48" href="" />
               </Head>
               <Header />
               <main>
