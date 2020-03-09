@@ -13,7 +13,7 @@ const MediaPortal = ({ media }) => {
 
     return ReactDOM.createPortal(
         <MediaPlayer
-            id={"player" + media.dataset.number}
+            id={"player" + media.dataset.url}
             mediaType="audio"
             preload="none"
             controls

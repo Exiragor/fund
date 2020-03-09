@@ -27,7 +27,7 @@ tinymce.PluginManager.add('slider', function(editor, url) {
         var data = api.getData();
         // Insert content when the window form is submitted
         editor.insertContent(`<div class="js-mini-slider" data-prefix="${data.name}">&nbsp;</div>
-                                <div class="d-none">Здесь будет добавлен мини-слайдер с названием: ${data.name}</div>`);
+                                <div class="d-none">Здесь будет добавлен мини-слайдер с названием: ${data.name}</div><br/>`);
         api.close();
       }
     });
