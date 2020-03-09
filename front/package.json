@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next -p 4000",
     "build": "next build",
-    "start": "cross-env API_URL=http://server.xn--80aap3adkp6cxd.xn--p1ai next start -p 4001"
+    "start": "cross-env API_URL=https://server.xn--80aap3adkp6cxd.xn--p1ai next start -p 4001"
   },
   "author": "",
   "license": "ISC",
