@@ -57,6 +57,7 @@ class MyMobxApp extends App {
                           href={`/static/favicon/favicon-${size}x${size}.ico`} />
                 )}
                 <link rel="icon" sizes="48x48" href="" />
+                <meta name="yandex-verification" content="a1d93620e2868dd8" />
               </Head>
               <Header />
               <main>
