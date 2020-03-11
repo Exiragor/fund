@@ -1,7 +1,7 @@
 export default {
     phone: '+7 (499) 755-95-51',
     phoneNative: '+74997559551',
-    email: 'nashapesnya@list.ru',
+    email: 'info@нашапесня.рф',
     address: 'Москва ул.Садовническая дом 33, стр1, офис 506',
     ogrn: '1195000002922',
     inn: '5038143310',
