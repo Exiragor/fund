@@ -13,9 +13,8 @@ const menu = [
         ]
     },
     { name: 'Маэстро', link: '/maestro', children: []},
-    { name: 'Программы', link: '/programs', children: []},
-    { name: 'Услуги', link: '/services', children: []},
     { name: 'Проекты', link: '/projects', children: []},
+    { name: 'Услуги', link: '/services', children: []},
     { name: 'Новости', link: '/news', children: []},
     { name: 'Контакты', link: '/contacts', children: []}
 ];
