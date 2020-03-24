@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Редактирование блока как помочь</h1>
-    <SlidesFillCard :item="currentSlide" />
+    <SlidesFillCard slider-name="help" :item="currentSlide" />
     <el-row>
       <el-col :offset="9" :span="5">
         <el-button type="success" @click="updateSlide">Изменить блок</el-button>
