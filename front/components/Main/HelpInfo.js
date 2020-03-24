@@ -1,46 +1,24 @@
 import Link from 'next/link';
+import {getImgUrlByIdWithParams} from "../../helpers";
 
-const HelpInfo = () =>
+const HelpInfo = ({articles}) =>
 <div className="grey_content">
     <div className="title">Как помочь?</div>
-    <div className="content_two">
-        <Link  href="/contacts">
-            <a>
-                <div id="u510" className="text">
-                    <p><span>Деньгами</span></p>
-                    <p>Поддерживая проекты Благотворительного Фонда «Наша Песня», Вы помогаете взрастить
-                        новое поколение детей и молодежи, решая проблемы жестокости, бездуховности,
-                        безнравственности, бескультурья посредством современной патриотической профессиональной песни.
-                        Она готова стать здоровой альтернативой прозападным «трендам», разрушающим неокрепшие мозги,
-                        стать другом, проводником к верным жизненным ориентирам!
-                        Вы можете перевести…
-                    </p>
-                </div>
-                <div className="img" style={{ backgroundImage: 'url(/деньги.jpg)'}}>
-                    <p>Деньгами</p>
-                </div>
-            </a>
-        </Link>
-    </div>
-    <div className="content_two">
-        <Link  href="/contacts">
-            <a>
-                <div id="u510" className="text">
-                    <p><span>Делом</span></p>
-                    <p>Мы с радостью примем в команду добровольцев, способных выполнять работу по душе.
-                        Можно стать волонтером на наших мероприятиях. А можно оказать профессиональную помощь:
-                        нам нужны люди, владеющие нотными редакторами «Sibelius», «Finale», «Capella»;
-                        педагоги творческих дисциплин, видеографы, аранжировщики, музыканты и певцы.
-                        Если Вы хотите применить свои способности для благих дел – оставьте координаты.
-                        Мы с Вами обязательно свяжемся.
-                    </p>
-                </div>
-                <div className="img" style={{ backgroundImage: 'url(/volonters.JPG)'}}>
-                    <p>Делом</p>
-                </div>
-            </a>
-        </Link>
-    </div>
+    {articles && articles.map(article =>
+        <div className="content_two" key={article.id}>
+            <Link href={article.link}>
+                <a>
+                    <div id="u510" className="text">
+                        <p><span>{article.title}</span></p>
+                        <p>{article.text}</p>
+                    </div>
+                    <div className="img" style={{ backgroundImage: `url(${getImgUrlByIdWithParams(article.photo, {width: 1104, height: 680})})`}}>
+                        <p>{article.title}</p>
+                    </div>
+                </a>
+            </Link>
+        </div>
+    )}
 </div>;
 
 export default HelpInfo;

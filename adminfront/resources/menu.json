@@ -9,5 +9,6 @@
   { "link": "/slider/main", "name": "Слайдер на главной", "icon": "connection" },
   { "link": "/slider/partners", "name": "Слайдер партнеров", "icon": "connection" },
   { "link": "/slider/mini", "name": "Мини-слайдеры", "icon": "connection" },
-  { "link": "/content", "name": "Блоки контента", "icon": "s-shop" }
+  { "link": "/slider/help", "name": "Как помочь", "icon": "help" },
+  { "link": "/content", "name": "Блоки контента", "icon": "s-grid" }
 ]
