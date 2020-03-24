@@ -15,12 +15,12 @@ const Header = () => <header>
                     </a>
                 </Link>
             </div>
-            <div className="arial widget">
+            <div className="arial widget color-red">
                 <div>
                     <p><span>Нет ничего достойней и красивей,<br /> Чем петь во славу Бога и России!</span></p>
                 </div>
             </div>
-            <div className="widget">
+            <div className="widget color-blue">
                 <div>
                     <p><span><a href={`tel:${contacts.phoneNative}`}>{contacts.phone}</a></span></p>
                     <p><span><a href={`mailto:${contacts.email}`}>{contacts.email}</a></span></p>

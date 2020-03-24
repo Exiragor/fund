@@ -2829,3 +2829,13 @@ a.file:before {
     left: 0px;
     color: red;
 }
+.copyright-info {
+    font-weight: 600;
+    padding: 15px 0 0 15px;
+}
+.color-blue {
+    color: #323c8d;
+}
+.color-red {
+    color: #e31d23;
+}

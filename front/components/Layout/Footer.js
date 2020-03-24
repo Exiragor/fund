@@ -71,6 +71,7 @@ const Footer = () => {
             <div className="footer widget">
                 <h5>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h5>
                 <Socials size="20px" />
+                <p className="copyright-info">Все права защищены. Копирование материалов сайта возможно при обязательной активной ссылке.</p>
             </div>
             <MiniSliderPortal sliders={miniSliders} />
 
