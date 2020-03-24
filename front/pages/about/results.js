@@ -1,5 +1,5 @@
 import Aside from '../../components/Navigation/Aside';
-import {menu} from './menu';
+import {menu} from '../../resources/menu';
 import { useEffect, useState } from 'react';
 import {getOne} from '../../api/content';
 import {useBus} from "react-bus";

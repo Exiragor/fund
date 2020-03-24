@@ -1,7 +1,7 @@
 import Aside from '../../components/Navigation/Aside';
 import List from '../../components/Articles/List';
 import {getAll} from '../../api/slides';
-import {menu} from './menu';
+import {menu} from '../../resources/menu';
 import {useEffect, useState} from "react";
 import {getOne} from "../../api/content";
 

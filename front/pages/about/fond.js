@@ -1,6 +1,6 @@
 import Aside from '../../components/Navigation/Aside';
 import MiniSliderPortal from '../../components/Sliders/MiniSliderPortal';
-import {menu} from './menu';
+import {menu} from '../../resources/menu';
 import { useEffect, useState } from 'react';
 import {getOne} from '../../api/content';
 import {useBus} from 'react-bus';
