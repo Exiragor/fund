@@ -4,7 +4,7 @@ const HelpInfo = () =>
 <div className="grey_content">
     <div className="title">Как помочь?</div>
     <div className="content_two">
-        <Link prefetch href="/contacts">
+        <Link  href="/contacts">
             <a>
                 <div id="u510" className="text">
                     <p><span>Деньгами</span></p>
@@ -16,14 +16,14 @@ const HelpInfo = () =>
                         Вы можете перевести…
                     </p>
                 </div>
-                <div className="img" style={{ backgroundImage: 'url(/static/деньги.jpg)'}}>
+                <div className="img" style={{ backgroundImage: 'url(/деньги.jpg)'}}>
                     <p>Деньгами</p>
                 </div>
             </a>
         </Link>
     </div>
     <div className="content_two">
-        <Link prefetch href="/contacts">
+        <Link  href="/contacts">
             <a>
                 <div id="u510" className="text">
                     <p><span>Делом</span></p>
@@ -35,7 +35,7 @@ const HelpInfo = () =>
                         Мы с Вами обязательно свяжемся.
                     </p>
                 </div>
-                <div className="img" style={{ backgroundImage: 'url(/static/volonters.JPG)'}}>
+                <div className="img" style={{ backgroundImage: 'url(/volonters.JPG)'}}>
                     <p>Делом</p>
                 </div>
             </a>

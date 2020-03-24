@@ -88,7 +88,7 @@ ul {
 }
 .sub-menu:before {
     content: '';
-    background-image: url("/static/arrow_up.png");
+    background-image: url("/front/public/arrow_up.png");
     width: 40px;
     position: absolute;
     height: 20px;
@@ -2712,22 +2712,22 @@ section.partners-slider .slick-next {
 }
 
 .slick-arrow {
-    background: url("/static/slick-arrow.svg") 50% no-repeat;
+    background: url("/front/public/slick-arrow.svg") 50% no-repeat;
     width: 64px;
     height: 64px;
     border-radius: 50px;
     transition: all 0.3s ease-out;
 }
 .slick-arrow:hover, .slick-arrow:focus {
-    background: url("/static/slick-arrow.svg") 50% no-repeat;
+    background: url("/front/public/slick-arrow.svg") 50% no-repeat;
     box-shadow: 0 20px 30px rgba(127,142,165,0.5);
 }
 section.partners-slider .slick-arrow {
-    background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
+    background: url("/front/public/slick-arrow--blue.svg") 50% no-repeat;
 }
 
 section.partners-slider .slick-arrow:hover, section.partners-slider .slick-arrow:focus {
-    background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
+    background: url("/front/public/slick-arrow--blue.svg") 50% no-repeat;
     box-shadow: 0 20px 30px rgba(127,142,165,0.5);
 }
 .mini-slider {
@@ -2750,11 +2750,11 @@ section.partners-slider .slick-arrow:hover, section.partners-slider .slick-arrow
     height: 48px;
 }
 .mini-slider .slick-arrow {
-    background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
+    background: url("/front/public/slick-arrow--blue.svg") 50% no-repeat;
 }
 
 .mini-slider .slick-arrow:hover, section.partners-slider .slick-arrow:focus {
-    background: url("/static/slick-arrow--blue.svg") 50% no-repeat;
+    background: url("/front/public/slick-arrow--blue.svg") 50% no-repeat;
     box-shadow: 0 20px 30px rgba(127,142,165,0.5);
 }
 
@@ -2820,7 +2820,7 @@ a.file {
 }
 a.file:before {
     content: '';
-    background-image: url("/static/document.svg");
+    background-image: url("/front/public/document.svg");
     background-size: cover;
     display: block;
     width: 17px;

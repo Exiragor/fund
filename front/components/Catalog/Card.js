@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {getImgUrlByIdWithParams} from '../../helpers/index';
 
 export default ({ service }) =>
-<Link href={`/${service.category}s/detail?id=${service.id}`} prefetch>
+<Link href={`/${service.category}s/detail?id=${service.id}`} >
     <div className="cards">
         <div className="services_image" style={{ backgroundImage: `url("${getImgUrlByIdWithParams(service.photo, {width: 1080, height: 780})}")` }} />
         <div className="services-content entry-content">

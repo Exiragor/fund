@@ -9,7 +9,7 @@ const NewsCard = ({ news }) =>
         </div>
         <div className="news_content">
             <div className="news-date">{dateFormat(news.date)}</div>
-            <Link prefetch href={`/news/detail?id=${news.id}`}>
+            <Link  href={`/news/detail?id=${news.id}`}>
                 <a>
                     <h3 className="news-title entry-title">{news.title}</h3>
                 </a>

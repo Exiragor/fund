@@ -17,7 +17,7 @@ const getLinkBySlide = (slide) => {
                     <img src={getImgUrlById(slide.photo)} alt={slide.title} />
                 </a>
                 :
-                <Link prefetch href={slide.link} key={slide.id}>
+                <Link  href={slide.link} key={slide.id}>
                     <a href="javascript:void(0)">
                         <img src={getImgUrlById(slide.photo)} alt={slide.title} />
                     </a>

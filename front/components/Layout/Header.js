@@ -9,9 +9,9 @@ const Header = () => <header>
     <div className="header" data-label="шапка">
         <div className="header_content">
             <div className="widget">
-                <Link prefetch href="/">
+                <Link  href="/">
                     <a>
-                        <img className="img" src="/static/logo.jpg" tabIndex="0" />
+                        <img className="img" src="/logo.jpg" tabIndex="0" />
                     </a>
                 </Link>
             </div>
@@ -27,7 +27,7 @@ const Header = () => <header>
                 </div>
             </div>
             <div className="widget">
-                <Link prefetch href="/contacts">
+                <Link  href="/contacts">
                     <a className="button">
                         <span className="text">Поддержать</span>
                     </a>

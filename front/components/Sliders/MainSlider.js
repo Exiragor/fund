@@ -33,7 +33,7 @@ const MainSlider = ({ slides }) => {
                         </a>
                     }
                     {!slides[slideIndex].url && slides[slideIndex].link &&
-                        <Link prefetch href={slides[slideIndex].link}>
+                        <Link  href={slides[slideIndex].link}>
                             <a className="button text-center button--main-slider">
                                 <span>Подробнее</span>
                             </a>

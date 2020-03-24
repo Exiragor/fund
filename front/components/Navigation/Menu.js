@@ -27,11 +27,11 @@ const Menu = () =>
                 {'menu-item-has-children': item.children.length > 0}) }
                 key={index}
             >
-                <Link prefetch href={item.link}><a>{item.name}</a></Link>
+                <Link  href={item.link}><a>{item.name}</a></Link>
                 {item.children.length > 0 && <ul className="sub-menu">
                     {item.children.map((subItem, index) =>
                         <li className="menu-item menu-item-type-post_type menu-item-object-page" key={index}>
-                            <Link prefetch href={subItem.link}><a>{subItem.name}</a></Link>
+                            <Link  href={subItem.link}><a>{subItem.name}</a></Link>
                         </li>
                     )}
                 </ul>}

@@ -5,7 +5,7 @@ const ArticleList = ({articles, width}) => {
         <div>
             {articles.map(article =>
                 <div className="cards" style={{width}} key={article.title}>
-                    <Link prefetch href={article.url}>
+                    <Link  href={article.url}>
                         <a>
                             <div className="services_image"
                                  style={{backgroundImage: `url(${article.img})`}}>
@@ -18,14 +18,14 @@ const ArticleList = ({articles, width}) => {
                         </a>
                     </Link>
                     <div className="text" style={{padding: '35px 40px'}}>
-                        <Link prefetch href={article.url}><a>
+                        <Link  href={article.url}><a>
                             <p style={{fontSize: '20px'}}>
                                 <span><strong>{article.title || ''}</strong></span>
                             </p>
                             <p>{article.text || ''}</p>
 
                         </a></Link>
-                        <Link prefetch href={article.url}><a>Подробнее
+                        <Link  href={article.url}><a>Подробнее
                             →</a></Link>
                     </div>
 

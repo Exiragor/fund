@@ -50,11 +50,11 @@ class MyMobxApp extends App {
               <Head>
                 <title>Наша песня</title>
                 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-                <link rel="shortcut icon" href="/static/favicon/favicon-16x16.ico" />
+                <link rel="shortcut icon" href="/favicon/favicon-16x16.ico" />
                 {favSizes.map(size =>
                     <link key={size} rel="icon"
                           sizes={`${size}x${size}`}
-                          href={`/static/favicon/favicon-${size}x${size}.ico`} />
+                          href={`/favicon/favicon-${size}x${size}.ico`} />
                 )}
                 <link rel="icon" sizes="48x48" href="" />
                 <meta name="yandex-verification" content="a1d93620e2868dd8" />

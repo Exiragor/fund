@@ -56,7 +56,7 @@ const Footer = () => {
                 </p>
                 <p className="text-left">
                     <span>
-                        <a href="/static/docs/download.docx" style={{fontWeight: 'bold'}} target="_blank">
+                        <a href="/docs/download.docx" style={{fontWeight: 'bold'}} target="_blank">
                             Политика обработки персональных данных
                         </a>
                     </span>

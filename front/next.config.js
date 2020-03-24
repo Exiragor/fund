@@ -8,7 +8,7 @@ const nextConfig = {
             use: {
                 loader: 'file-loader',
                 query: {
-                    name: 'static/media/[name].[ext]'
+                    name: 'public/media/[name].[ext]'
                 }
             }
         });

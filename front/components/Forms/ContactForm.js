@@ -106,7 +106,7 @@ const ContactForm = () => {
                             ))}
                             <div className="ask-bottom">
                                 <div className="text_left">Нажимая на кнопку «Отправить», вы даете <a
-                                    href="/static/docs/download.docx"
+                                    href="/docs/download.docx"
                                     target="_blank">согласие на обработку своих персональных данных</a>.
                                 </div>
 
