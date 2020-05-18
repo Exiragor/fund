@@ -58,6 +58,7 @@ class MyMobxApp extends App {
                 )}
                 <link rel="icon" sizes="48x48" href="" />
                 <meta name="yandex-verification" content="a1d93620e2868dd8" />
+                <meta name="verification" content="ea295d80fa4928ee4e953875bfa5f4" />
               </Head>
               <Header />
               <main>
