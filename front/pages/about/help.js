@@ -1,9 +1,8 @@
 import Aside from '../../components/Navigation/Aside';
 import List from '../../components/Articles/List';
 import {getAll} from '../../api/slides';
-import {menu} from '../../resources/menu';
+import {aboutMenu} from '../../resources/menu';
 import {useEffect, useState} from "react";
-import {getOne} from "../../api/content";
 
 const HelpPage = () => {
     const [helpSlides, setHelpSlides] = useState([]);
@@ -20,7 +19,7 @@ const HelpPage = () => {
             <div className="entry-content with-sidebar">
                 <List articles={helpSlides} width="45%" />
             </div>
-            <Aside sections={menu} currentPage="Как помочь" />
+            <Aside sections={aboutMenu} currentPage="Как помочь" />
         </div>
     );
 };

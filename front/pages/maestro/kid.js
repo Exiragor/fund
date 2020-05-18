@@ -1,15 +1,15 @@
 import Aside from '../../components/Navigation/Aside';
-import {aboutMenu} from '../../resources/menu';
+import {maestroMenu} from '../../resources/menu';
 import { useEffect, useState } from 'react';
 import {getOne} from '../../api/content';
-import {useBus} from "react-bus";
+import {useBus} from 'react-bus';
 
-const aboutPartnersPage = () => {
+const maestroKidPage = () => {
     const [content, setContent] = useState('');
     const bus = useBus();
 
     useEffect(() => {
-        getOne('about-partners').then(res => {
+        getOne('maestro-kid').then(res => {
             setContent(res.data);
             bus.emit('mini-sliders:refresh');
             bus.emit('audios:refresh');
@@ -20,9 +20,9 @@ const aboutPartnersPage = () => {
         <div className="wrapper">
             <h1 className="entry-title">{ content.name }</h1>
             <div className="entry-content with-sidebar" dangerouslySetInnerHTML={{ __html: content.value }} />
-            <Aside sections={aboutMenu} currentPage={content.name} />
+            <Aside sections={maestroMenu} currentPage={content.name} />
         </div>
     )
 };
 
-export default aboutPartnersPage;
+export default maestroKidPage;

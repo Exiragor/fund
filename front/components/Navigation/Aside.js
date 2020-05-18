@@ -8,7 +8,7 @@ const Aside = ({ sections, currentPage }) => {
                 <ul>
                     {sections.map(section =>
                             <li className={cn('page_item', { 'current_page_item': section.name === currentPage})} key={section.name}>
-                                <Link  href={section.url}><a>{section.name}</a></Link>
+                                <Link  href={section.link}><a>{section.name}</a></Link>
                             </li>
                         )
                     }

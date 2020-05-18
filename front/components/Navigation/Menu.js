@@ -1,28 +1,11 @@
 import Link from 'next/link';
 import cn from 'classnames';
-
-const menu = [
-    {   name: 'О нас',
-        link: '/about/fond',
-        children: [
-            { name: 'О фонде', link: '/about/fond'},
-            { name: 'Как помочь', link: '/about/help'},
-            { name: 'Команда', link: '/about/partners'},
-            { name: 'Достижения', link: '/about/results'},
-            { name: 'Отчеты', link: '/about/reports'},
-        ]
-    },
-    { name: 'Маэстро', link: '/maestro', children: []},
-    { name: 'Проекты', link: '/projects', children: []},
-    { name: 'Услуги', link: '/services', children: []},
-    { name: 'Новости', link: '/news', children: []},
-    { name: 'Контакты', link: '/contacts', children: []}
-];
+import {mainMenu} from "../../resources/menu";
 
 const Menu = () => 
 <div className="menu-mnu-container">
     <ul id="menu-mnu" className="menu">
-        {menu.map((item, index) =>
+        {mainMenu.map((item, index) =>
             <li className={ cn("menu-item menu-item-type-post_type menu-item-object-page",
                 {'menu-item-has-children': item.children.length > 0}) }
                 key={index}
