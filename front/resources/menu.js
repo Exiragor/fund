@@ -20,10 +20,10 @@ export const mainMenu = [
         link: '/about/fond',
         children: aboutMenu
     },
-    {   name: 'Маэстро',
-        link: '/maestro/music',
-        children: maestroMenu
-    },
+    // {   name: 'Маэстро',
+    //     link: '/maestro/music',
+    //     children: maestroMenu
+    // },
     { name: 'Маэстро', link: '/maestro', children: []},
     { name: 'Проекты', link: '/projects', children: []},
     { name: 'Услуги', link: '/services', children: []},

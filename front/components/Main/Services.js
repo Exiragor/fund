@@ -9,7 +9,7 @@ const Services = ({ activities, programs, services }) => <div className="content
             </div>
         </a>
     </Link>
-    <Link  href="/programs">
+    <Link  href="/projects">
         <a>
             <div className="td-3">
                 <img className="home_block_image" src="/main/programs.png" />
