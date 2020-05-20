@@ -45,7 +45,6 @@ class MyMobxApp extends App {
     return (
       <Container>
         <BusProvider>
-          <Provider store={this.mobxStore}>
             <div className="canvas">
               <Head>
                 <title>Наша песня</title>
@@ -65,7 +64,6 @@ class MyMobxApp extends App {
               </main>
               <Footer />
             </div>
-          </Provider>
         </BusProvider>
       </Container>
     )
