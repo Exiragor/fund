@@ -57,6 +57,7 @@ class MyMobxApp extends App {
                 )}
                 <link rel="icon" sizes="48x48" href="" />
                 <meta name="yandex-verification" content="a1d93620e2868dd8" />
+                <script src="https://kassa.yandex.ru/checkout-ui/v2.js"></script>
               </Head>
               <Header />
               <main>

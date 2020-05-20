@@ -6,6 +6,7 @@ import {slidesRouter, privateSlidesRouter} from './slides';
 import {contentRouter, privateContentRouter} from './content';
 import {projectsRouter, privateProjectsRouter} from './projects';
 import {feedbackRouter, privateFeedbackRouter} from './feedback';
+import {paymentRouter} from './payment';
 import {emailRouter, privateEmailRouter} from './email';
 import authRouter from './auth';
 import env from "dotenv";
@@ -35,6 +36,7 @@ router.use('/content', contentRouter);
 router.use('/projects', projectsRouter);
 router.use('/feedback', feedbackRouter);
 router.use('/email', emailRouter);
+router.use('/payment', paymentRouter);
 router.get('/', (req: Request, res: Response) => res.json({ status: 200, text: "Welcome to Api! It's working."}));
 
 

@@ -6,6 +6,8 @@ declare global {
             APP_MODE: 'development' | 'production';
             APP_SECRET_KEY: string;
             APP_ADMIN_PASS: string;
+            YAN_SECRET_KEY: string;
+            YAN_SHOP_ID: string;
         }
     }
 }
