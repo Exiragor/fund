@@ -18,7 +18,6 @@ export default () => {
             setNews(res.data.items);
             setPages(res.data.total);
         });
-        console.log(process.env);
     }, [router]);
 
     const changePageHandler = (num) => {
@@ -32,7 +31,7 @@ export default () => {
                 <NewsList news={news} />
                 <Pagination currentPage={+page} total={+pages} count={count} changePage={changePageHandler} />
             </div>
-            <Aside sections={[{ name: 'Шаг за шагом', url: '/news'}]} currentPage="Шаг за шагом" />
+            <Aside sections={[{ name: 'Шаг за шагом', link: '/news'}]} currentPage="Шаг за шагом" />
         </div>
     );
 }

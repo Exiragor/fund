@@ -2,6 +2,7 @@ import App, { Container } from 'next/app';
 import React from 'react';
 import { initializeStore } from '../store';
 import { Provider } from 'mobx-react';
+import 'antd/dist/antd.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../style.css";
@@ -45,7 +46,6 @@ class MyMobxApp extends App {
     return (
       <Container>
         <BusProvider>
-          <Provider store={this.mobxStore}>
             <div className="canvas">
               <Head>
                 <title>Наша песня</title>
@@ -59,6 +59,7 @@ class MyMobxApp extends App {
                 <link rel="icon" sizes="48x48" href="" />
                 <meta name="yandex-verification" content="a1d93620e2868dd8" />
                 <meta name="verification" content="ea295d80fa4928ee4e953875bfa5f4" />
+                <script src="https://kassa.yandex.ru/checkout-ui/v2.js"></script>
               </Head>
               <Header />
               <main>
@@ -66,7 +67,6 @@ class MyMobxApp extends App {
               </main>
               <Footer />
             </div>
-          </Provider>
         </BusProvider>
       </Container>
     )

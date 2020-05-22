@@ -8,7 +8,7 @@ body {
     background-image: none;
     position: relative;
     left: -0px;
-    width: 1200px;
+    width: 1200px !important;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
@@ -136,7 +136,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 25px 15px;
+    padding: 0 25px 7px;
 }
 .header .widget:nth-of-type(1) {
     width: 402px;
@@ -2838,4 +2838,8 @@ a.file:before {
 }
 .color-red {
     color: #e31d23;
+}
+.support-button-continue .ant-form-item-control-input-content {
+    display: flex;
+    justify-content: center;
 }
