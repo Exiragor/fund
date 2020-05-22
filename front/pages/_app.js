@@ -2,6 +2,7 @@ import App, { Container } from 'next/app';
 import React from 'react';
 import { initializeStore } from '../store';
 import { Provider } from 'mobx-react';
+import 'antd/dist/antd.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../style.css";

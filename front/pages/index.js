@@ -5,6 +5,8 @@ import PartnersSlider from '../components/Sliders/PartnersSlider';
 import {getAll} from '../api/slides';
 import {getOne} from '../api/content';
 import {useEffect, useState} from "react";
+import { useRouter } from 'next/router';
+import {Modal} from "antd";
 
 const Home = () => {
     const [mainSlides, setMainSlides] = useState([]);
@@ -13,6 +15,14 @@ const Home = () => {
     const [activitiesBlock, setActivitiesBlock] = useState(null);
     const [programsBlock, setProgramsBlock] = useState(null);
     const [servicesBlock, setServicesBlock] = useState(null);
+    const [showSupportModal, setShowSupportModal] = useState(false);
+
+    const handleCancel = e => {
+        setShowSupportModal(false);
+    };
+
+    const router = useRouter();
+    const {status, checksum} = router.query;
 
     useEffect(() => {
         getAll('main').then(res => {
@@ -33,6 +43,10 @@ const Home = () => {
         getOne('main-services-block').then(res => {
             setServicesBlock(res.data);
         });
+
+        if (checksum && status && status == 'success') {
+            setShowSupportModal(true);
+        }
     }, []);
 
     return (
@@ -42,6 +56,14 @@ const Home = () => {
             <Services activities={activitiesBlock} programs={programsBlock} services={servicesBlock} />
             <HelpInfo articles={helpSlides} />
             <PartnersSlider slides={partnersSlides} />
+            <Modal
+                title=""
+                visible={showSupportModal}
+                onCancel={handleCancel}
+                footer={null}
+            >
+                <h1>Спасибо за поддержку!</h1>
+            </Modal>
         </div>
     );
 };
