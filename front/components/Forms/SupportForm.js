@@ -33,9 +33,11 @@ const PriceInput = ({ value = {}, onChange }) => {
 
     return (
           <Input
+              className="custom-price-input"
               type="text"
               value={value.number || number}
               onChange={onNumberChange}
+              suffix="РУБ"
           />
     );
 };
@@ -53,7 +55,7 @@ const SupportForm = () => {
 
                     const checkout = new window.YandexCheckout({
                         confirmation_token: res.data.confirmation.confirmation_token, //Токен, который перед проведением оплаты нужно получить от Яндекс.Кассы
-                        return_url: 'http://localhost:4000/', //Ссылка на страницу завершения оплаты
+                        return_url: 'https://нашапесня.рф/', //Ссылка на страницу завершения оплаты
                         error_callback(error) {
                             console.error(error);
                         }
@@ -75,25 +77,6 @@ const SupportForm = () => {
     return (
         <div>
             {!paymentInfo &&
-                <div>
-                    <p>Дорогие друзья!</p>
-                    <p>Ваши пожертвования будут направлены на создание и продвижение профессиональных песен для детей и взрослых о любви к Родине, о верности долгу и Отечеству, о главных человеческих ценностях, о православии, о здоровом образе жизни...</p>
-
-                    <p>
-                        Нам нужны средства на производство аранжировок, студийную работу, на тиражирование компакт-дисков, караоке, нотных сборников для распространения в учебных и образовательных учреждениях всех типов.
-                        Будем благодарны за пожертвования на съемку и создание музыкальных клипов духовно-патриотического содержания, на проведение Международных фестивалей, конкурсов, флэшмобов.
-                    </p>
-
-                    <p>Необходимы финансы для рекламы, промо акций и создания наградных сувениров.</p>
-
-                    <p>
-                        Наша Цель – творческое единение поколений, оздоровление общества и спасение «Нашей песни» от уничтожения…
-                        Спасибо за участие.
-                        Да хранит Вас Господь!
-                    </p>
-                </div>
-            }
-            {!paymentInfo &&
                 <Form
                     name="customized_form_controls"
                     onFinish={onFinish}
@@ -104,9 +87,21 @@ const SupportForm = () => {
                         },
                     }}
                 >
+                    <Form.Item>
+                        <div className="text-black">
+                            <p className="text-bold">Дорогие друзья!</p>
+                            <p>Ваши пожертвования пойдут на выпуск музыкальных пособий для детских садов, школ, детских домов; на  организацию Благотворительных концертов, духовно-патриотических фестивалей, флешмобов, мастер-классов; на реализацию социально-значимых программ.</p>
+                            <p>
+                                Наша Цель – творческое единение поколений, оздоровление общества и спасение «Нашей песни» от уничтожения… <br/>
+                                Спасибо за участие.<br/>
+                                Да хранит Вас Господь!
+                            </p>
+                        </div>
+                    </Form.Item>
                     <Form.Item
                         name="price"
-                        label="Размер пожертвования, руб"
+                        className="custom-price-input"
+                        label="Размер пожертвования"
                         rules={[
                             {
                                 validator: checkPrice,
@@ -116,9 +111,11 @@ const SupportForm = () => {
                         <PriceInput/>
                     </Form.Item>
                     <Form.Item className="support-button-continue">
-                        <Button type="danger" htmlType="submit" loading={isLoading} style={{width: '200px'}}>
-                            Далее
+                        <Button type="danger" htmlType="submit" shape="round"  loading={isLoading} style={{width: '200px'}}>
+                            Пожертвовать
                         </Button>
+                    </Form.Item>
+                    <Form.Item className="text-cursive">Нажимая на кнопку «Пожертвовать», вы принимаете условия публичной оферты и даете <a className="text-blue" href="/docs/download.docx" target="_blank">согласие на обработку своих персональных данных </a>
                     </Form.Item>
                 </Form>
             }
