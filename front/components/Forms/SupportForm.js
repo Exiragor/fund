@@ -115,7 +115,7 @@ const SupportForm = () => {
                             Пожертвовать
                         </Button>
                     </Form.Item>
-                    <Form.Item className="text-cursive">Нажимая на кнопку «Пожертвовать», вы принимаете условия публичной оферты и даете <a className="text-blue" href="/docs/download.docx" target="_blank">согласие на обработку своих персональных данных </a>
+                    <Form.Item className="text-cursive">Нажимая на кнопку «Пожертвовать», вы принимаете условия <a className="text-blue" href="https://server.нашапесня.рф/files/330/%D0%9F%D1%83%D0%B1%D0%BB%D0%B8%D1%87%D0%BD%D0%B0%D1%8F%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D0%B0.pdf" target="_blank">публичной оферты</a> и даете согласие на обработку своих <a className="text-blue" href="/docs/download.docx" target="_blank">персональных данных </a>
                     </Form.Item>
                 </Form>
             }
