@@ -2874,3 +2874,6 @@ a.file:before {
 .text-blue {
     color: rgb(22, 155, 213);
 }
+.ant-modal-content {
+    transition: all 1.2s ease-in-out;
+}
