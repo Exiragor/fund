@@ -58,7 +58,13 @@ const SupportForm = () => {
                         return_url: 'https://xn--80aap3adkp6cxd.xn--p1ai/', //Ссылка на страницу завершения оплаты
                         error_callback(error) {
                             console.error(error);
-                        }
+                        },
+                        customization: {
+                            colors: {
+                                controlPrimary: '#e31d23',
+                                controlPrimaryContent: '#FFFFFF'
+                            }
+                        },
                     });
 
                     checkout.render('payment-form');
