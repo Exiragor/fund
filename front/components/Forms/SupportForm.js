@@ -55,10 +55,16 @@ const SupportForm = () => {
 
                     const checkout = new window.YandexCheckout({
                         confirmation_token: res.data.confirmation.confirmation_token, //Токен, который перед проведением оплаты нужно получить от Яндекс.Кассы
-                        return_url: 'https://нашапесня.рф/', //Ссылка на страницу завершения оплаты
+                        return_url: 'https://xn--80aap3adkp6cxd.xn--p1ai/', //Ссылка на страницу завершения оплаты
                         error_callback(error) {
                             console.error(error);
-                        }
+                        },
+                        customization: {
+                            colors: {
+                                controlPrimary: '#e31d23',
+                                controlPrimaryContent: '#FFFFFF'
+                            }
+                        },
                     });
 
                     checkout.render('payment-form');

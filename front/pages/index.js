@@ -7,6 +7,7 @@ import {getOne} from '../api/content';
 import {useEffect, useState} from "react";
 import { useRouter } from 'next/router';
 import {Modal} from "antd";
+import {HeartFilled} from '@ant-design/icons';
 
 const Home = () => {
     const [mainSlides, setMainSlides] = useState([]);
@@ -44,7 +45,7 @@ const Home = () => {
             setServicesBlock(res.data);
         });
 
-        if (checksum && status && status == 'success') {
+        if (status && status == 'success') {
             setShowSupportModal(true);
         }
     }, []);
@@ -62,7 +63,7 @@ const Home = () => {
                 onCancel={handleCancel}
                 footer={null}
             >
-                <h1>Спасибо за поддержку!</h1>
+                <h1 className="color-blue">Благодарим за пожертвование! <span className="color-red"><HeartFilled /></span></h1>
             </Modal>
         </div>
     );
