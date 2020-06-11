@@ -72,5 +72,8 @@ module.exports = {
   port: '3001',
   env: {
     apiUrl: process.env.API_URL
+  },
+  router: {
+    base: '/admin/'
   }
 }
