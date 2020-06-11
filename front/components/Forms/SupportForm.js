@@ -52,7 +52,7 @@ const SupportForm = () => {
             .then(res => {
                 if (res.data && res.data.confirmation) {
                     setPaymentInfo(res.data);
-
+                    localStorage.setItem('lastPaymentId', res.data.id);
                     const checkout = new window.YandexCheckout({
                         confirmation_token: res.data.confirmation.confirmation_token, //Токен, который перед проведением оплаты нужно получить от Яндекс.Кассы
                         return_url: 'https://xn--80aap3adkp6cxd.xn--p1ai/', //Ссылка на страницу завершения оплаты
@@ -129,75 +129,5 @@ const SupportForm = () => {
         </div>
     );
 };
-
-// const SupportForm = () => {
-//     const [emailSubmitted, setEmailSubmitted] = useState(false);
-//     const [paymentInfo, setPaymentInfo] = useState(null);
-//
-//     const inputs = [{
-//         type: 'text',
-//         name: 'amount',
-//         placeholder: 'Введите сумму, руб',
-//         className: 'ask_input',
-//         errorClass: 'errors'
-//     }];
-//
-//     return (
-//         <div className="ask-form">
-//             {emailSubmitted && <div className="contact_message">Вы успешно подписаны на наши новости!</div>}
-//             {!emailSubmitted && <Formik
-//                 initialValues={{amount: ''}}
-//                 validationSchema={supportSchema}
-//                 onSubmit={async (values, { setSubmitting }) => {
-//                     create()
-//                         .then(res => {
-//
-//                         })
-//                         .catch(err => console.error(err));
-//                     let res = await create(values.amount);
-//                     if (res.data && res.data.confirmation) {
-//                         setPaymentInfo(res.data);
-//
-//                         const checkout = new window.YandexCheckout({
-//                             confirmation_token: res.data.confirmation.confirmation_token, //Токен, который перед проведением оплаты нужно получить от Яндекс.Кассы
-//                             return_url: 'http://localhost:4000/support', //Ссылка на страницу завершения оплаты
-//                             error_callback(error) {
-//                                 console.error(error);
-//                             }
-//                         });
-//
-//                         checkout.render('payment-form');
-//                     }
-//                     setSubmitting(false);
-//                 }}
-//             >
-//                 {({ isSubmitting }) => (
-//                     <Form>
-//                         <div className="ask-div-input">
-//                             {inputs.map((input, index) => (
-//                                 <div className="contact" key={index}>
-//                                     <Field
-//                                         as={input.field}
-//                                         type={input.type}
-//                                         name={input.name}
-//                                         placeholder={input.placeholder}
-//                                         className={input.className} />
-//                                     <ErrorMessage
-//                                         name={input.name}
-//                                         component="div"
-//                                         className={input.errorClass} />
-//                                 </div>
-//                             ))}
-//                             <button type="submit" disabled={isSubmitting} className="submit_send submit_send--email button--red">
-//                                 Далее
-//                             </button>
-//                         </div>
-//                     </Form>
-//                 )}
-//             </Formik>}
-//             <div id="payment-form"></div>
-//         </div>
-//     );
-// };
 
 export default SupportForm;
