@@ -15,3 +15,7 @@ export const createPayment = async (amount: number) => {
     capture: true
   }, idempotenceKey);
 };
+
+export const getPayment = async (id: string) => {
+  return await yandexCheckout.getPayment(id);
+}

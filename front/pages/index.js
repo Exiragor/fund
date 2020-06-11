@@ -8,6 +8,7 @@ import {useEffect, useState} from "react";
 import { useRouter } from 'next/router';
 import {Modal} from "antd";
 import {HeartFilled} from '@ant-design/icons';
+import {getInfo} from "../api/payment";
 
 const Home = () => {
     const [mainSlides, setMainSlides] = useState([]);
@@ -23,7 +24,6 @@ const Home = () => {
     };
 
     const router = useRouter();
-    const {status, checksum} = router.query;
 
     useEffect(() => {
         getAll('main').then(res => {
@@ -44,9 +44,15 @@ const Home = () => {
         getOne('main-services-block').then(res => {
             setServicesBlock(res.data);
         });
-
-        if (status && status == 'success') {
-            setShowSupportModal(true);
+        const paymentId = localStorage.getItem('lastPaymentId');
+        if (paymentId) {
+            getInfo(paymentId).then(res => {
+                const status = res.data.status;
+                if (status && status == 'succeeded') {
+                    setShowSupportModal(true);
+                    localStorage.removeItem('lastPaymentId');
+                }
+            });
         }
     }, []);
 
