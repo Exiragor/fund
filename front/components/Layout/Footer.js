@@ -63,14 +63,14 @@ const Footer = () => {
                 </p>
             </div>
             <div className="footer widget">
-                <h5>БУДЬ В КУРСЕ НОВОСТЕЙ</h5>
+                <h5 className="text-white">БУДЬ В КУРСЕ НОВОСТЕЙ</h5>
                 <div>
                     <DynamicEmailComponent />
                 </div>
             </div>
             <div className="footer widget">
-                <h5>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h5>
-                <Socials size="20px" />
+                <h5 className="text-white">МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h5>
+                <Socials size="20" />
                 <p className="copyright-info">Все права защищены. Копирование материалов сайта возможно при обязательной активной ссылке.</p>
             </div>
             <MiniSliderPortal sliders={miniSliders} />

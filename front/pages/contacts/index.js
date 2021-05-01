@@ -25,7 +25,7 @@ export default () => {
                         <div className="contact_social">
                             <div className="contact_left_text" />
                             <div className="contact_right_text">
-                                <Socials size="24px" />
+                                <Socials size="24" />
                             </div>
                         </div>
                         <div className="contact_title">Реквизиты</div>

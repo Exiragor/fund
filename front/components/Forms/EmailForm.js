@@ -17,7 +17,7 @@ const EmailForm = () => {
         name: 'email',
         placeholder: 'Ваш email',
         className: 'test',
-        errorClass: 'email-err'
+        errorClass: 'email-err text-white'
     }];
 
     return (
