@@ -28,12 +28,14 @@ ul {
 }
 .menu-mnu-container {
     height: 100%;
-    display: flex;
-    align-items: center;
 }
+.menu-mnu-container ul.menu, li {
+    height: 100%;
+}
+
 .menu > li {
-    display: inline-block;
-    /* margin: 18px 30px; */
+    display: inline-flex;
+    align-items: center;
     position: relative;
     padding: 0 30px;
 }
@@ -87,9 +89,13 @@ ul {
     padding: 10px 20px;
 }
 .sub-menu li {
+    color: black;
     font-size: 14px;
     width: 200px;
     word-break: break-word;
+}
+.sub-menu li:hover > a {
+    color: #2462f3;
 }
 .sub-menu:before {
     content: '';
