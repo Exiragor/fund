@@ -8,7 +8,7 @@ const List = ({ size }) => {
     ];
 
     const svgYandex = {
-        url: 'https://zen.yandex.ru/nashapesnya',
+        url: 'https://zen.yandex.ru/id/60d61152c9cd91167d9d1850',
     };
 
     return (
