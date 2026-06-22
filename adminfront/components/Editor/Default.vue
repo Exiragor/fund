@@ -1,19 +1,15 @@
 <template>
-  <editor
+  <tinymce-editor
     tinymceScriptSrc="/tinymce/tinymce.min.js"
     v-model="value"
     :init="initOptions"
-  ></editor>
+  ></tinymce-editor>
 </template>
 
 <script>
-  import Editor from '@tinymce/tinymce-vue';
   import {uploadFile} from '@/api/files'
 
   export default {
-    components: {
-      Editor
-    },
     props: {
       initValue: {
         type: String,
@@ -27,7 +23,6 @@
     data() {
       return {
         initOptions: {
-          base_url: '/tinymce',
           height: 500,
           menubar: true,
           language: 'ru',
