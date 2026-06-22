@@ -1,6 +1,6 @@
 <template>
   <editor
-    api-key="ewvx4lc71tp100vfx4tz5am3r0xudeu8hzvw7zuicqcl38fz"
+    tinymceScriptSrc="/js/tinymce.min.js"
     v-model="value"
     :init="initOptions"
   ></editor>
