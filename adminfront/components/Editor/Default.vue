@@ -25,7 +25,8 @@
           height: 500,
           menubar: true,
           language: 'ru',
-          language_url: '/js/ru.js',
+          skin: false,
+          content_css: false,
           plugins: [
             'advlist autolink lists link image charmap print preview anchor',
             'searchreplace visualblocks code fullscreen',
@@ -36,9 +37,6 @@
             alignleft aligncenter alignright alignjustify | \
             bullist numlist outdent indent | removeformat | \
             slider',
-          external_plugins: {
-            'slider': '/js/plugin-mini-slider.js'
-          },
           file_picker_types: 'file image media',
           images_upload_handler: (blobInfo, success, failure) => {
               uploadFile(this.$auth.getToken('local'), blobInfo.blob())
