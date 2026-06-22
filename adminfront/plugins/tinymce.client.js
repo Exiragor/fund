@@ -2,15 +2,16 @@
 import Vue from 'vue'
 import Editor from '@tinymce/tinymce-vue'
 
-// Импортируем ядро
+// Ядро
 import tinymce from 'tinymce/tinymce'
 
-// Импортируем тему, скины, плагины
+// Тема (обязательно) – в ней уже есть иконки
 import 'tinymce/themes/silver'
-import 'tinymce/icons/default'
+
+// Скин – стили для UI
 import 'tinymce/skins/ui/oxide/skin.min.css'
 
-// Импортируем нужные плагины (все, что вы используете)
+// Импортируем все плагины, которые вы используете
 import 'tinymce/plugins/advlist'
 import 'tinymce/plugins/autolink'
 import 'tinymce/plugins/lists'
@@ -30,7 +31,8 @@ import 'tinymce/plugins/table'
 import 'tinymce/plugins/paste'
 import 'tinymce/plugins/help'
 import 'tinymce/plugins/wordcount'
-// Если у вас кастомный плагин slider, он уже подключается отдельно через external_plugins
+
+// Кастомный плагин 'slider' подключается через external_plugins, его здесь не импортируем
 
 // Регистрируем компонент глобально
 Vue.component('tinymce-editor', Editor)
