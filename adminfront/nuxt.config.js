@@ -12,7 +12,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: '/skin.min.css' }
     ]
   },
   /*
@@ -23,8 +24,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css',
-    '/skin.min.css'
+    'element-ui/lib/theme-chalk/index.css'
   ],
   /*
   ** Plugins to load before mounting the App
