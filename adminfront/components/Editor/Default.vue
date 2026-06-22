@@ -1,6 +1,5 @@
 <template>
   <tinymce-editor
-    tinymceScriptSrc="/tinymce/tinymce.min.js"
     v-model="value"
     :init="initOptions"
   ></tinymce-editor>
