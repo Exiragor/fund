@@ -1,6 +1,6 @@
 <template>
   <editor
-    tinymceScriptSrc="/js/tinymce.min.js"
+    tinymceScriptSrc="/tinymce/tinymce.min.js"
     v-model="value"
     :init="initOptions"
   ></editor>
@@ -27,6 +27,7 @@
     data() {
       return {
         initOptions: {
+          base_url: '/tinymce',
           height: 500,
           menubar: true,
           language: 'ru',
